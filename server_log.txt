@@ -1,0 +1,1737 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[11/08/2026 23:03:03] 
+[11/08/2026 23:03:03] Server Plugins
+[11/08/2026 23:03:03] --------------
+[11/08/2026 23:03:03]  Loading plugin: streamer.dll
+[11/08/2026 23:03:04] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[11/08/2026 23:03:04]   Loaded.
+[11/08/2026 23:03:04]  Loading plugin: sscanf.dll
+[11/08/2026 23:03:04] 
+
+[11/08/2026 23:03:04]  ===============================
+
+[11/08/2026 23:03:04]       sscanf plugin loaded.     
+
+[11/08/2026 23:03:04]          Version:  2.8.3        
+
+[11/08/2026 23:03:04]   (c) 2018 Alex "Y_Less" Cole  
+
+[11/08/2026 23:03:04]  ===============================
+
+[11/08/2026 23:03:04]   Loaded.
+[11/08/2026 23:03:04]  Loading plugin: mysql.dll
+[11/08/2026 23:03:05]  >> plugin.mysql: R41-4 successfully loaded.
+[11/08/2026 23:03:05]   Loaded.
+[11/08/2026 23:03:05]  Loading plugin: pawnraknet.dll
+[11/08/2026 23:03:05] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[11/08/2026 23:03:05]   Loaded.
+[11/08/2026 23:03:05]  Loading plugin: pawncmd.dll
+[11/08/2026 23:03:05] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[11/08/2026 23:03:05]   Loaded.
+[11/08/2026 23:03:05]  Loading plugin: nativechecker.dll
+[11/08/2026 23:03:05]   Loaded.
+[11/08/2026 23:03:05]  Loaded 6 plugins.
+
+[11/08/2026 23:03:06] 
+[11/08/2026 23:03:06] Filterscripts
+[11/08/2026 23:03:06] ---------------
+[11/08/2026 23:03:06]   Loading filterscript 'Mapas.amx'...
+[11/08/2026 23:03:06]   Loading filterscript 'ls_elevator.amx'...
+[11/08/2026 23:03:06]   Loaded 2 filterscripts.
+
+[11/08/2026 23:03:06] ---------------------------------------------------------
+[11/08/2026 23:03:06]  	      fenixzone Roleplay - Versión v5.00 
+[11/08/2026 23:03:06]                s1.fenixzone.com - rol.fenixzone.com
+[11/08/2026 23:03:06] ---------------------------------------------------------
+[11/08/2026 23:03:06]  
+[11/08/2026 23:03:06] Number of vehicle models: 3
+[11/08/2026 23:03:08] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[11/08/2026 23:03:08] Autos a cargar: 261
+[11/08/2026 23:03:09] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63651 id: 0
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63652 id: 1
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63653 id: 2
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63654 id: 3
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63656 id: 4
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63657 id: 5
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63655 id: 6
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63659 id: 7
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63662 id: 8
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63660 id: 9
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63658 id: 10
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63661 id: 11
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63663 id: 12
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63664 id: 13
+[11/08/2026 23:03:10] [npc:join] .Motorman2 has joined the server (1:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Marcelo has joined the server (4:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Miguel has joined the server (5:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Sergio has joined the server (6:127.0.0.1)
+[11/08/2026 23:03:10] [connection] incoming connection: 127.0.0.1:63665 id: 14
+[11/08/2026 23:03:10] [npc:join] .Alejandro has joined the server (7:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Jorge has joined the server (8:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Camello1 has joined the server (9:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .HippiePepe has joined the server (10:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Angelica has joined the server (11:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[11/08/2026 23:03:10] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[11/08/2026 23:03:11] [npc:join] .Mao has joined the server (14:127.0.0.1)
+[11/08/2026 23:04:23] [connection] incoming connection: 127.0.0.1:52154 id: 15
+[11/08/2026 23:04:23] [join] Darrent_Vantrell has joined the server (15:127.0.0.1)
+[11/08/2026 23:04:23] [nick] Darrent_Vantrell nick changed to 1341NT523mSX53p
+[11/08/2026 23:04:48] [ERROR] ID: 1146 - Error: Table 'fz.smf_members' doesn't exist - Callback -  - Query: INSERT INTO `smf_members` (member_name, passwd, real_name, date_registered, id_group, email_address,buddy_list, is_activated) VALUES ('Darrent_Vantrell', SHA1(CONCAT(LOWER('1A2b3c4d5e'))), 'Darrent Vantrell',UNIX_TIMESTAMP(now()), 13, 'earnhardt2710@gmail.com','0', '1')
+[11/08/2026 23:04:48] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='1' WHERE `Variable`='totalMembers'
+[11/08/2026 23:04:48] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='Darrent_Vantrell' WHERE `Variable`='latestRealName'
+[11/08/2026 23:04:48] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='1' WHERE `Variable`='latestMember'
+[11/08/2026 23:04:53] [nick] 1341NT523mSX53p nick changed to Darrent_Vantrell
+[11/08/2026 23:04:55] [chat] [Darrent_Vantrell]: asd
+[11/08/2026 23:05:03] [part] Darrent_Vantrell has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[12/08/2026 21:32:09] 
+[12/08/2026 21:32:09] Server Plugins
+[12/08/2026 21:32:09] --------------
+[12/08/2026 21:32:09]  Loading plugin: streamer.dll
+[12/08/2026 21:32:12] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[12/08/2026 21:32:12]   Loaded.
+[12/08/2026 21:32:12]  Loading plugin: sscanf.dll
+[12/08/2026 21:32:12] 
+
+[12/08/2026 21:32:12]  ===============================
+
+[12/08/2026 21:32:12]       sscanf plugin loaded.     
+
+[12/08/2026 21:32:12]          Version:  2.8.3        
+
+[12/08/2026 21:32:12]   (c) 2018 Alex "Y_Less" Cole  
+
+[12/08/2026 21:32:12]  ===============================
+
+[12/08/2026 21:32:12]   Loaded.
+[12/08/2026 21:32:12]  Loading plugin: mysql.dll
+[12/08/2026 21:32:14]  >> plugin.mysql: R41-4 successfully loaded.
+[12/08/2026 21:32:14]   Loaded.
+[12/08/2026 21:32:14]  Loading plugin: pawnraknet.dll
+[12/08/2026 21:32:15] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[12/08/2026 21:32:15]   Loaded.
+[12/08/2026 21:32:15]  Loading plugin: pawncmd.dll
+[12/08/2026 21:32:15] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[12/08/2026 21:32:15]   Loaded.
+[12/08/2026 21:32:15]  Loading plugin: nativechecker.dll
+[12/08/2026 21:32:15]   Loaded.
+[12/08/2026 21:32:15]  Loaded 6 plugins.
+
+[12/08/2026 21:32:15] 
+[12/08/2026 21:32:15] Filterscripts
+[12/08/2026 21:32:15] ---------------
+[12/08/2026 21:32:15]   Loading filterscript 'Mapas.amx'...
+[12/08/2026 21:32:15]   Loading filterscript 'ls_elevator.amx'...
+[12/08/2026 21:32:15]   Loaded 2 filterscripts.
+
+[12/08/2026 21:32:32] |------------------------------------------|
+[12/08/2026 21:32:32] | Conexión fallida con la base de datos  |
+[12/08/2026 21:32:32] | El servidor se cerrará en 5 segundos...  |
+[12/08/2026 21:32:32] |------------------------------------------|
+[12/08/2026 21:32:32]  
+[12/08/2026 21:32:32] Number of vehicle models: 3
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback -  - Query: UPDATE `usuarios` SET `Online` = '0'
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - CargarAutos - Query: SELECT * FROM `vehicles`
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - CargarBandas - Query: SELECT * FROM `facciones`
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - CargarRegistros - Query: SELECT * FROM `registros`
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - LoadParkings - Query: SELECT * FROM estacionamientos
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - LoadDoor - Query: SELECT * FROM `doors`
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - OnQueryFinish - Query: SELECT * FROM action_queue WHERE status = '0'
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - CargarPropiedades - Query: SELECT * FROM `propiedades`
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - cargarRoboTiendas - Query: SELECT * FROM `actores_tiendas`
+[12/08/2026 21:32:34] [ERROR] ID: 2002 - Error: Can't connect to MySQL server on 'localhost' (10061) - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[12/08/2026 21:32:38] --- Server Shutting Down.
+[12/08/2026 21:32:38] 
+
+*** Streamer Plugin v2.9.4 by Incognito unloaded ***
+
+[12/08/2026 21:32:38] 
+
+[12/08/2026 21:32:38]  ===============================
+
+[12/08/2026 21:32:38]      sscanf plugin unloaded.    
+
+[12/08/2026 21:32:38]  ===============================
+
+[12/08/2026 21:32:38] plugin.mysql: Unloading plugin...
+[12/08/2026 21:32:38] plugin.mysql: Plugin unloaded.
+[12/08/2026 21:32:38] Pawn.RakNet plugin v1.3.0 by urShadow has been unloaded
+[12/08/2026 21:32:38] Pawn.CMD plugin v3.2.0 by urShadow has been unloaded
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[12/08/2026 21:34:08] 
+[12/08/2026 21:34:08] Server Plugins
+[12/08/2026 21:34:08] --------------
+[12/08/2026 21:34:08]  Loading plugin: streamer.dll
+[12/08/2026 21:34:08] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[12/08/2026 21:34:08]   Loaded.
+[12/08/2026 21:34:08]  Loading plugin: sscanf.dll
+[12/08/2026 21:34:08] 
+
+[12/08/2026 21:34:08]  ===============================
+
+[12/08/2026 21:34:08]       sscanf plugin loaded.     
+
+[12/08/2026 21:34:08]          Version:  2.8.3        
+
+[12/08/2026 21:34:08]   (c) 2018 Alex "Y_Less" Cole  
+
+[12/08/2026 21:34:08]  ===============================
+
+[12/08/2026 21:34:08]   Loaded.
+[12/08/2026 21:34:08]  Loading plugin: mysql.dll
+[12/08/2026 21:34:08]  >> plugin.mysql: R41-4 successfully loaded.
+[12/08/2026 21:34:08]   Loaded.
+[12/08/2026 21:34:08]  Loading plugin: pawnraknet.dll
+[12/08/2026 21:34:08] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[12/08/2026 21:34:08]   Loaded.
+[12/08/2026 21:34:08]  Loading plugin: pawncmd.dll
+[12/08/2026 21:34:08] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[12/08/2026 21:34:08]   Loaded.
+[12/08/2026 21:34:08]  Loading plugin: nativechecker.dll
+[12/08/2026 21:34:08]   Loaded.
+[12/08/2026 21:34:08]  Loaded 6 plugins.
+
+[12/08/2026 21:34:08] 
+[12/08/2026 21:34:08] Filterscripts
+[12/08/2026 21:34:08] ---------------
+[12/08/2026 21:34:08]   Loading filterscript 'Mapas.amx'...
+[12/08/2026 21:34:08]   Loading filterscript 'ls_elevator.amx'...
+[12/08/2026 21:34:08]   Loaded 2 filterscripts.
+
+[12/08/2026 21:34:08] ---------------------------------------------------------
+[12/08/2026 21:34:08]  	      fenixzone Roleplay - Versión v5.00 
+[12/08/2026 21:34:08]                s1.fenixzone.com - rol.fenixzone.com
+[12/08/2026 21:34:08] ---------------------------------------------------------
+[12/08/2026 21:34:08]  
+[12/08/2026 21:34:08] Number of vehicle models: 3
+[12/08/2026 21:34:11] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[12/08/2026 21:34:11] Autos a cargar: 261
+[12/08/2026 21:34:12] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58429 id: 0
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58426 id: 1
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58428 id: 2
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58425 id: 3
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58430 id: 4
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58427 id: 5
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58432 id: 6
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58431 id: 7
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58433 id: 8
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58434 id: 9
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58435 id: 10
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58436 id: 11
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58437 id: 12
+[12/08/2026 21:34:12] [npc:join] .Sergio has joined the server (0:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Motorman1 has joined the server (1:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58438 id: 13
+[12/08/2026 21:34:12] [npc:join] .Motorman2 has joined the server (3:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Alejandro has joined the server (4:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Motorman4 has joined the server (5:127.0.0.1)
+[12/08/2026 21:34:12] [connection] incoming connection: 127.0.0.1:58439 id: 14
+[12/08/2026 21:34:12] [npc:join] .Miguel has joined the server (6:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Marcelo has joined the server (7:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .HippiePepe has joined the server (8:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Camello1 has joined the server (9:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Hugo has joined the server (10:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Angelica has joined the server (11:127.0.0.1)
+[12/08/2026 21:34:12] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[12/08/2026 21:34:13] [npc:join] .Jorge has joined the server (13:127.0.0.1)
+[12/08/2026 21:34:13] [npc:join] .Mao has joined the server (14:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[12/08/2026 21:39:19] 
+[12/08/2026 21:39:19] Server Plugins
+[12/08/2026 21:39:19] --------------
+[12/08/2026 21:39:19]  Loading plugin: streamer.dll
+[12/08/2026 21:39:19] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[12/08/2026 21:39:19]   Loaded.
+[12/08/2026 21:39:19]  Loading plugin: sscanf.dll
+[12/08/2026 21:39:19] 
+
+[12/08/2026 21:39:19]  ===============================
+
+[12/08/2026 21:39:19]       sscanf plugin loaded.     
+
+[12/08/2026 21:39:19]          Version:  2.8.3        
+
+[12/08/2026 21:39:19]   (c) 2018 Alex "Y_Less" Cole  
+
+[12/08/2026 21:39:19]  ===============================
+
+[12/08/2026 21:39:19]   Loaded.
+[12/08/2026 21:39:19]  Loading plugin: mysql.dll
+[12/08/2026 21:39:19]  >> plugin.mysql: R41-4 successfully loaded.
+[12/08/2026 21:39:19]   Loaded.
+[12/08/2026 21:39:19]  Loading plugin: pawnraknet.dll
+[12/08/2026 21:39:19] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[12/08/2026 21:39:19]   Loaded.
+[12/08/2026 21:39:19]  Loading plugin: pawncmd.dll
+[12/08/2026 21:39:19] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[12/08/2026 21:39:19]   Loaded.
+[12/08/2026 21:39:19]  Loading plugin: nativechecker.dll
+[12/08/2026 21:39:19]   Loaded.
+[12/08/2026 21:39:19]  Loaded 6 plugins.
+
+[12/08/2026 21:39:19] 
+[12/08/2026 21:39:19] Filterscripts
+[12/08/2026 21:39:19] ---------------
+[12/08/2026 21:39:19]   Loading filterscript 'Mapas.amx'...
+[12/08/2026 21:39:19]   Loading filterscript 'ls_elevator.amx'...
+[12/08/2026 21:39:19]   Loaded 2 filterscripts.
+
+[12/08/2026 21:39:19] ---------------------------------------------------------
+[12/08/2026 21:39:19]  	      fenixzone Roleplay - Versión v5.00 
+[12/08/2026 21:39:19]                s1.fenixzone.com - rol.fenixzone.com
+[12/08/2026 21:39:19] ---------------------------------------------------------
+[12/08/2026 21:39:19]  
+[12/08/2026 21:39:19] Number of vehicle models: 3
+[12/08/2026 21:39:21] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[12/08/2026 21:39:21] Autos a cargar: 261
+[12/08/2026 21:39:21] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59283 id: 0
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59284 id: 1
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59285 id: 2
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59286 id: 3
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59287 id: 4
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59288 id: 5
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59289 id: 6
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59291 id: 7
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59290 id: 8
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59292 id: 9
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59293 id: 10
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59295 id: 11
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59294 id: 12
+[12/08/2026 21:39:22] [connection] incoming connection: 127.0.0.1:59296 id: 13
+[12/08/2026 21:39:23] [connection] incoming connection: 127.0.0.1:59297 id: 14
+[12/08/2026 21:39:23] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Motorman2 has joined the server (1:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Sergio has joined the server (4:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Miguel has joined the server (5:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Marcelo has joined the server (6:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Camello1 has joined the server (7:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Alejandro has joined the server (8:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .HippiePepe has joined the server (9:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Ignacio has joined the server (11:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Angelica has joined the server (10:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Jorge has joined the server (12:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[12/08/2026 21:39:23] [npc:join] .Mao has joined the server (14:127.0.0.1)
+[12/08/2026 21:41:44] [connection] incoming connection: 181.44.187.190:62032 id: 15
+[12/08/2026 21:41:45] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[12/08/2026 21:41:45] [nick] Darrent_Vantrell nick changed to 0s7b2P30lA6vCE2
+[12/08/2026 21:41:58] [nick] 0s7b2P30lA6vCE2 nick changed to Darrent_Vantrell
+[12/08/2026 21:47:33] [connection] incoming connection: 181.191.224.208:45461 id: 16
+[12/08/2026 21:47:34] [join] Symere_Vantrell has joined the server (16:181.191.224.208)
+[12/08/2026 21:47:34] [nick] Symere_Vantrell nick changed to 26wxrXV532R800Q
+[12/08/2026 21:48:31] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='1' WHERE `Variable`='totalMembers'
+[12/08/2026 21:48:31] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='Symere_Vantrell' WHERE `Variable`='latestRealName'
+[12/08/2026 21:48:31] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='1' WHERE `Variable`='latestMember'
+[12/08/2026 21:48:31] [ERROR] ID: 1146 - Error: Table 'fz.smf_members' doesn't exist - Callback -  - Query: INSERT INTO `smf_members` (member_name, passwd, real_name, date_registered, id_group, email_address,buddy_list, is_activated) VALUES ('Symere_Vantrell', SHA1(CONCAT(LOWER('emdidit'))), 'Symere Vantrell',UNIX_TIMESTAMP(now()), 13, 'jasdjasdj@kirki.com','0', '1')
+[12/08/2026 21:49:46] Symere_Vantrell(16) - (Escape en registro)
+[12/08/2026 21:49:47] [part] 26wxrXV532R800Q has left the server (16:1)
+[12/08/2026 21:49:57] [connection] incoming connection: 181.191.224.208:45717 id: 16
+[12/08/2026 21:49:57] [join] Symere_Vantrell has joined the server (16:181.191.224.208)
+[12/08/2026 21:49:57] [nick] Symere_Vantrell nick changed to z9c84jsq2H999BS
+[12/08/2026 21:50:33] [nick] z9c84jsq2H999BS nick changed to Symere_Vantrell
+[12/08/2026 21:51:15] [chat] [Darrent_Vantrell]: foto pal dc
+[12/08/2026 21:51:33] [chat] [Darrent_Vantrell]: se viene algo grande manin
+[12/08/2026 21:51:37] [chat] [Symere_Vantrell]: tomatela wachin
+[12/08/2026 21:51:42] [chat] [Darrent_Vantrell]: nuestro propio sv :-)
+[12/08/2026 21:51:49] [chat] [Symere_Vantrell]: :fire:
+[12/08/2026 21:51:53] [chat] [Darrent_Vantrell]: toca codear
+[12/08/2026 21:51:54] [chat] [Symere_Vantrell]: donde esta el host
+[12/08/2026 21:51:58] [chat] [Darrent_Vantrell]: pa hacer lo de largada aleatoria etc
+[12/08/2026 21:52:02] [chat] [Darrent_Vantrell]: es mi localhost xd
+[12/08/2026 21:52:05] [chat] [Darrent_Vantrell]: jajaj
+[12/08/2026 21:52:06] [chat] [Darrent_Vantrell]: argentina
+[12/08/2026 21:52:07] [chat] [Darrent_Vantrell]: fa
+[12/08/2026 21:52:08] [chat] [Symere_Vantrell]: ahh
+[12/08/2026 21:52:09] [chat] [Symere_Vantrell]: jaja
+[12/08/2026 21:52:09] [chat] [Darrent_Vantrell]: 10 de ping
+[12/08/2026 21:52:14] [chat] [Darrent_Vantrell]: q loco como manda los msjs rapidisimo
+[12/08/2026 21:52:19] [chat] [Darrent_Vantrell]: te va lag?
+[12/08/2026 21:52:23] [chat] [Darrent_Vantrell]: o normal?
+[12/08/2026 21:52:39] [chat] [Darrent_Vantrell]: tengo que ver como darme admin
+[12/08/2026 21:52:41] [chat] [Darrent_Vantrell]: y stats a todos
+[12/08/2026 21:52:53] [chat] [Symere_Vantrell]: quiero una mansión en richman
+[12/08/2026 21:52:59] [chat] [Darrent_Vantrell]: duro
+[12/08/2026 21:53:03] [chat] [Darrent_Vantrell]: tengo un cargo xd
+[12/08/2026 21:53:03] [chat] [Symere_Vantrell]: kja
+[12/08/2026 21:53:06] [chat] [Symere_Vantrell]: xd
+[12/08/2026 21:53:12] [chat] [Darrent_Vantrell]: bueno voy a empezar a revisar
+[12/08/2026 21:53:18] [chat] [Darrent_Vantrell]: asi jugamos lo mas pronto posible
+[12/08/2026 21:53:19] [connection] incoming connection: 149.88.30.113:59853 id: 17
+[12/08/2026 21:53:20] [join] Trent_Vantrell has joined the server (17:149.88.30.113)
+[12/08/2026 21:53:20] [nick] Trent_Vantrell nick changed to K90AGhjlC92mD70
+[12/08/2026 21:53:20] [chat] [Symere_Vantrell]: dale, me avisas cualquier cosa
+[12/08/2026 21:53:21] [chat] [Darrent_Vantrell]: unos duelos aca
+[12/08/2026 21:53:23] [chat] [Darrent_Vantrell]: dale mano gracias
+[12/08/2026 21:53:26] [chat] [Darrent_Vantrell]: nv
+[12/08/2026 21:53:27] [chat] [Symere_Vantrell]: nv bro
+[12/08/2026 21:53:28] [death] Darrent_Vantrell died 255
+[12/08/2026 21:53:29] [part] Symere_Vantrell has left the server (16:1)
+[12/08/2026 21:53:47] [ERROR] ID: 1146 - Error: Table 'fz.smf_members' doesn't exist - Callback -  - Query: INSERT INTO `smf_members` (member_name, passwd, real_name, date_registered, id_group, email_address,buddy_list, is_activated) VALUES ('Trent_Vantrell', SHA1(CONCAT(LOWER('prueba123'))), 'Trent Vantrell',UNIX_TIMESTAMP(now()), 13, 'prueba123@gmail.com','0', '1')
+[12/08/2026 21:53:47] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='Trent_Vantrell' WHERE `Variable`='latestRealName'
+[12/08/2026 21:53:47] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='2' WHERE `Variable`='totalMembers'
+[12/08/2026 21:53:47] [ERROR] ID: 1146 - Error: Table 'fz.smf_settings' doesn't exist - Callback -  - Query: UPDATE `smf_settings` SET `Value`='2' WHERE `Variable`='latestMember'
+[12/08/2026 21:53:53] [nick] K90AGhjlC92mD70 nick changed to Trent_Vantrell
+[12/08/2026 21:54:38] [chat] [Trent_Vantrell]: a
+[12/08/2026 21:54:40] [chat] [Darrent_Vantrell]: diablo
+[12/08/2026 21:54:44] [chat] [Trent_Vantrell]: puse estadio para todos
+[12/08/2026 21:54:45] [chat] [Darrent_Vantrell]: 390 de ping xd
+[12/08/2026 21:54:47] [chat] [Trent_Vantrell]: no para admin solamente
+[12/08/2026 21:54:50] [chat] [Trent_Vantrell]: si, q raro
+[12/08/2026 21:54:54] [chat] [Darrent_Vantrell]: pense q ibas a tener 70
+[12/08/2026 21:54:56] [chat] [Trent_Vantrell]: igual ando con vpn puesto
+[12/08/2026 21:54:58] [chat] [Darrent_Vantrell]: ah
+[12/08/2026 21:55:03] [chat] [Trent_Vantrell]: es eso?
+[12/08/2026 21:55:04] [chat] [Trent_Vantrell]: xd
+[12/08/2026 21:55:06] [chat] [Darrent_Vantrell]: y sin vpn te va a crashear?
+[12/08/2026 21:55:08] [chat] [Darrent_Vantrell]: si seguro
+[12/08/2026 21:55:11] [chat] [Darrent_Vantrell]: si sos de bsas encima
+[12/08/2026 21:55:14] [chat] [Trent_Vantrell]: no, no me va a crashear
+[12/08/2026 21:55:20] [chat] [Darrent_Vantrell]: te va a andar bien creo
+[12/08/2026 21:55:24] [chat] [Trent_Vantrell]: si
+[12/08/2026 21:55:26] [chat] [Darrent_Vantrell]: a ver fijate cuanto ping tenes sin vpn
+[12/08/2026 21:55:26] [chat] [Trent_Vantrell]: el problema es ovh
+[12/08/2026 21:55:30] [chat] [Trent_Vantrell]: el host q usa fz y superdanova
+[12/08/2026 21:55:34] [chat] [Darrent_Vantrell]: claro
+[12/08/2026 21:55:35] [part] Trent_Vantrell has left the server (17:1)
+[12/08/2026 21:56:09] [connection] incoming connection: 200.117.56.42:50855 id: 16
+[12/08/2026 21:56:10] [join] Trent_Vantrell has joined the server (16:200.117.56.42)
+[12/08/2026 21:56:10] [nick] Trent_Vantrell nick changed to 73WuCbYP211X750
+[12/08/2026 21:56:23] [nick] 73WuCbYP211X750 nick changed to Trent_Vantrell
+[12/08/2026 21:56:25] [chat] [Trent_Vantrell]: 33 de ping
+[12/08/2026 21:56:43] [chat] [Trent_Vantrell]: ya se xq tenia 400, estaba conectado a un vpn yankee
+[12/08/2026 21:56:53] [chat] [Darrent_Vantrell]: uh
+[12/08/2026 21:56:53] [chat] [Darrent_Vantrell]: nice
+[12/08/2026 21:56:55] [chat] [Trent_Vantrell]: de mi pc iba a usa, y de usa a tu pc
+[12/08/2026 21:56:56] [chat] [Trent_Vantrell]: KJASJSA
+[12/08/2026 21:56:58] [chat] [Trent_Vantrell]: doble trayecto
+[12/08/2026 21:57:01] [chat] [Darrent_Vantrell]: yo quiero ver como funcina el lagpit
+[12/08/2026 21:57:03] [chat] [Darrent_Vantrell]: con 10 de ping jajaj
+[12/08/2026 21:57:07] [chat] [Darrent_Vantrell]: como seran las james y eso
+[12/08/2026 21:57:10] [chat] [Trent_Vantrell]: a ver
+[12/08/2026 21:57:12] [chat] [Darrent_Vantrell]: capaz te choco y es skinshoot
+[12/08/2026 21:57:16] [chat] [Trent_Vantrell]: tenes q darte admin
+[12/08/2026 21:57:19] [chat] [Darrent_Vantrell]: como me doy admin?
+[12/08/2026 21:57:24] [chat] [Darrent_Vantrell]: y como te doy nivel 4
+[12/08/2026 21:57:27] [chat] [Trent_Vantrell]: ir a phpmyadmin
+[12/08/2026 21:57:28] [chat] [Darrent_Vantrell]: q creo q es pa correr
+[12/08/2026 21:57:34] [chat] [Trent_Vantrell]: buscar la tabla usuarios
+[12/08/2026 21:57:34] [chat] [Darrent_Vantrell]: hace falta q deslogee?
+[12/08/2026 21:57:35] [chat] [Trent_Vantrell]: buscar tu user
+[12/08/2026 21:57:46] [chat] [Trent_Vantrell]: si tenes q relogear
+[12/08/2026 21:57:46] [chat] [Trent_Vantrell]: pero
+[12/08/2026 21:57:50] [chat] [Trent_Vantrell]: creo q podes editar estando on
+[12/08/2026 21:57:53] [chat] [Darrent_Vantrell]: ok
+[12/08/2026 21:57:55] [chat] [Trent_Vantrell]: busca tu user, el mio
+[12/08/2026 21:58:03] [chat] [Trent_Vantrell]: y en un campo aparece algo relacionado
+[12/08/2026 21:58:05] [chat] [Darrent_Vantrell]: te voy leyendo por cmd
+[12/08/2026 21:58:06] [chat] [Trent_Vantrell]: a ve rme fijo
+Console input: asd
+Console input: say asd
+Console input: chat asd
+[12/08/2026 22:01:23] [chat] [Trent_Vantrell]: a
+[12/08/2026 22:02:44] [chat] [Darrent_Vantrell]: ya somos admins
+[12/08/2026 22:03:03] [chat] [Trent_Vantrell]: a ver
+[12/08/2026 22:03:03] [part] Trent_Vantrell has left the server (16:1)
+[12/08/2026 22:03:06] [part] Darrent_Vantrell has left the server (15:1)
+[12/08/2026 22:03:29] [connection] incoming connection: 200.117.56.42:56952 id: 15
+[12/08/2026 22:03:29] [join] Trent_Vantrell has joined the server (15:200.117.56.42)
+[12/08/2026 22:03:29] [nick] Trent_Vantrell nick changed to i85t7E693X90419
+[12/08/2026 22:03:32] [connection] incoming connection: 181.44.187.190:59154 id: 16
+[12/08/2026 22:03:32] [join] Darrent_Vantrell has joined the server (16:181.44.187.190)
+[12/08/2026 22:03:32] [nick] Darrent_Vantrell nick changed to 5cL3H79060dJ076
+[12/08/2026 22:03:42] [nick] i85t7E693X90419 nick changed to Trent_Vantrell
+[12/08/2026 22:03:46] [nick] 5cL3H79060dJ076 nick changed to Darrent_Vantrell
+[12/08/2026 22:03:46] [chat] [Trent_Vantrell]: no
+[12/08/2026 22:03:50] [chat] [Trent_Vantrell]: o si
+[12/08/2026 22:03:52] [chat] [Darrent_Vantrell]: no se
+[12/08/2026 22:03:55] [chat] [Trent_Vantrell]: no
+[12/08/2026 22:04:02] [chat] [Darrent_Vantrell]: habra q reiniciar el sv?
+[12/08/2026 22:04:09] [chat] [Trent_Vantrell]: a
+[12/08/2026 22:04:10] [chat] [Trent_Vantrell]: capaz
+[12/08/2026 22:04:12] [chat] [Darrent_Vantrell]: a ver pruebo
+[12/08/2026 22:04:13] [part] Darrent_Vantrell has left the server (16:1)
+[12/08/2026 22:04:15] [part] Trent_Vantrell has left the server (15:1)
+[12/08/2026 22:04:51] [connection] incoming connection: 200.117.56.42:56953 id: 15
+[12/08/2026 22:04:51] [join] Trent_Vantrell has joined the server (15:200.117.56.42)
+[12/08/2026 22:04:51] [nick] Trent_Vantrell nick changed to 5d0b0JpZ9AzS1E6
+[12/08/2026 22:05:38] [connection] incoming connection: 181.44.187.190:59607 id: 16
+[12/08/2026 22:05:38] [join] Darrent_Vantrell has joined the server (16:181.44.187.190)
+[12/08/2026 22:05:38] [nick] Darrent_Vantrell nick changed to G493LQ803627E2p
+[12/08/2026 22:05:51] [chat] [5d0b0JpZ9AzS1E6]: ahora si
+[12/08/2026 22:05:55] [chat] [G493LQ803627E2p]: opa
+[12/08/2026 22:05:57] [chat] [G493LQ803627E2p]: en el tab
+[12/08/2026 22:06:01] [chat] [G493LQ803627E2p]: salimos con el numero raro
+[12/08/2026 22:06:07] [chat] [G493LQ803627E2p]: y como nos damos nivel?
+[12/08/2026 22:06:10] [chat] [G493LQ803627E2p]: y guita
+[12/08/2026 22:06:15] [chat] [5d0b0JpZ9AzS1E6]: pera
+[12/08/2026 22:06:15] [chat] [G493LQ803627E2p]: editando en los campos
+[12/08/2026 22:06:18] [chat] [5d0b0JpZ9AzS1E6]: no me acuerdo los cmds
+[12/08/2026 22:06:19] [chat] [5d0b0JpZ9AzS1E6]: xddd
+[12/08/2026 22:06:22] [chat] [5d0b0JpZ9AzS1E6]: si, se puede editando campos
+[12/08/2026 22:06:26] [chat] [5d0b0JpZ9AzS1E6]: pero por cmd tmb
+[12/08/2026 22:06:36] [chat] [G493LQ803627E2p]: los tenes por ahi?
+[12/08/2026 22:06:40] [chat] [5d0b0JpZ9AzS1E6]: no
+[12/08/2026 22:06:42] [chat] [5d0b0JpZ9AzS1E6]: tendria q buscar en la gm
+[12/08/2026 22:06:46] [chat] [G493LQ803627E2p]: sino igual estaria bueno crear un cmd para que usen /recibir stats
+[12/08/2026 22:06:47] [chat] [G493LQ803627E2p]: y listo
+[12/08/2026 22:06:53] [chat] [5d0b0JpZ9AzS1E6]: ah si
+[12/08/2026 22:07:00] [chat] [G493LQ803627E2p]: pero bueno ahora probar
+[12/08/2026 22:07:05] [chat] [5d0b0JpZ9AzS1E6]: igual en la gm
+[12/08/2026 22:07:06] [chat] [G493LQ803627E2p]: lo hago manualmente desde la db
+[12/08/2026 22:07:09] [chat] [5d0b0JpZ9AzS1E6]: se debe poder cambiar eso
+[12/08/2026 22:07:12] [chat] [5d0b0JpZ9AzS1E6]: en lugar q les de nivel 1
+[12/08/2026 22:07:14] [chat] [5d0b0JpZ9AzS1E6]: nivel 4
+[12/08/2026 22:07:16] [chat] [G493LQ803627E2p]: ah si
+[12/08/2026 22:07:18] [chat] [5d0b0JpZ9AzS1E6]: o poner las carreras al nivel 1
+[12/08/2026 22:07:22] [chat] [G493LQ803627E2p]: pero necesito darles plata
+[12/08/2026 22:07:25] [chat] [G493LQ803627E2p]: no igual no sabes xq
+[12/08/2026 22:07:28] [chat] [G493LQ803627E2p]: xq los nivel 1 traspasan
+[12/08/2026 22:07:31] [chat] [5d0b0JpZ9AzS1E6]: a
+[12/08/2026 22:07:34] [chat] [5d0b0JpZ9AzS1E6]: ciertos
+[12/08/2026 22:07:41] [chat] [G493LQ803627E2p]: entonces
+[12/08/2026 22:07:47] [chat] [5d0b0JpZ9AzS1E6]: usa panel
+[12/08/2026 22:07:47] [chat] [G493LQ803627E2p]: edito la db y nos doy plata y lvl 10
+[12/08/2026 22:07:52] [chat] [5d0b0JpZ9AzS1E6]:  /panel
+[12/08/2026 22:07:57] [chat] [G493LQ803627E2p]: ah si
+[12/08/2026 22:08:08] [chat] [G493LQ803627E2p]: xddddddddddddd
+[12/08/2026 22:08:16] [chat] [5d0b0JpZ9AzS1E6]: esto es tipico de sv trucho
+[12/08/2026 22:08:41] [chat] [G493LQ803627E2p]: lvl 2
+[12/08/2026 22:09:12] [nick] 5d0b0JpZ9AzS1E6 nick changed to Trent_Vantrell
+[12/08/2026 22:09:18] [chat] [Trent_Vantrell]: compra
+[12/08/2026 22:09:21] [chat] [Trent_Vantrell]: nivel
+[12/08/2026 22:09:22] [chat] [G493LQ803627E2p]: listo
+[12/08/2026 22:09:25] [nick] G493LQ803627E2p nick changed to Darrent_Vantrell
+[12/08/2026 22:09:48] [chat] [Darrent_Vantrell]: compra
+[12/08/2026 22:09:55] [chat] [Darrent_Vantrell]: ya tenemos
+[12/08/2026 22:09:59] [chat] [Trent_Vantrell]:  /carrera
+[12/08/2026 22:10:01] [chat] [Darrent_Vantrell]: usa carrera a ver
+[12/08/2026 22:10:27] [chat] [Trent_Vantrell]: me olvide sacar ese 2.
+[12/08/2026 22:10:29] sscanf warning: String buffer overflow.
+[12/08/2026 22:10:32] [chat] [Darrent_Vantrell]: xd
+[12/08/2026 22:10:40] [chat] [Darrent_Vantrell]: es con el A no?
+[12/08/2026 22:10:44] [chat] [Trent_Vantrell]: el 1ro
+[12/08/2026 22:10:45] [chat] [Trent_Vantrell]: si
+[12/08/2026 22:10:48] [chat] [Darrent_Vantrell]: ah yo coleon?
+[12/08/2026 22:10:49] [chat] [Trent_Vantrell]: todos los demas coleones
+[12/08/2026 22:10:50] [chat] [Trent_Vantrell]: xDD
+[12/08/2026 22:10:51] [chat] [Darrent_Vantrell]: xd
+[12/08/2026 22:10:54] [chat] [Darrent_Vantrell]: voy a 100fps
+[12/08/2026 22:10:54] [chat] [Trent_Vantrell]: igual no se si es por id
+[12/08/2026 22:11:02] [chat] [Darrent_Vantrell]: che
+[12/08/2026 22:11:08] [chat] [Darrent_Vantrell]: estoy medio cagado con el tema de q es mi ip xd
+[12/08/2026 22:11:10] [chat] [Darrent_Vantrell]: que puede llegar a pasar
+[12/08/2026 22:11:23] [chat] [Trent_Vantrell]: y
+[12/08/2026 22:11:27] [chat] [Trent_Vantrell]: pueden acceder a tu pc
+[12/08/2026 22:11:28] [chat] [Trent_Vantrell]: supongo
+[12/08/2026 22:11:30] [chat] [Trent_Vantrell]: jasja
+[12/08/2026 22:11:32] [chat] [Darrent_Vantrell]: xd
+[12/08/2026 22:11:34] [chat] [Trent_Vantrell]: pero quien sabe eso?
+[12/08/2026 22:11:36] [chat] [Darrent_Vantrell]: nadie
+[12/08/2026 22:11:37] [chat] [Trent_Vantrell]: en el dc nadie creo
+[12/08/2026 22:11:47] [chat] [Trent_Vantrell]: sino habria q ver un host gratuito
+[12/08/2026 22:11:58] [chat] [Darrent_Vantrell]: habria que buscar
+[12/08/2026 22:12:00] [chat] [Trent_Vantrell]: no se si existe
+[12/08/2026 22:12:03] [chat] [Darrent_Vantrell]: jaimen tenia uno si
+[12/08/2026 22:12:07] [chat] [Trent_Vantrell]: y cuantos jugadores soporta
+[12/08/2026 22:12:11] [chat] [Darrent_Vantrell]: bastantes
+[12/08/2026 22:12:14] [chat] [Darrent_Vantrell]: me acuerdo
+[12/08/2026 22:12:19] [chat] [Darrent_Vantrell]: y era jugable
+[12/08/2026 22:12:46] [chat] [Trent_Vantrell]: lastima
+[12/08/2026 22:12:47] [chat] [Darrent_Vantrell]: te di medis y crack
+[12/08/2026 22:12:52] [chat] [Trent_Vantrell]: no se puede editar de a 2
+[12/08/2026 22:12:53] [chat] [Trent_Vantrell]: la gm
+[12/08/2026 22:12:57] [chat] [Trent_Vantrell]: creo q desde vs code no se puede
+[12/08/2026 22:13:01] [chat] [Trent_Vantrell]: habria q preguntarle a la ia
+[12/08/2026 22:13:02] [chat] [Darrent_Vantrell]: pienso subirlo a github
+[12/08/2026 22:13:09] [chat] [Darrent_Vantrell]: y vamos editando de ahi
+[12/08/2026 22:13:12] [chat] [Trent_Vantrell]: pero
+[12/08/2026 22:13:25] [chat] [Trent_Vantrell]: habria q verlo cada uno en su pc?
+[12/08/2026 22:13:28] [chat] [Darrent_Vantrell]: si
+[12/08/2026 22:13:31] [chat] [Trent_Vantrell]: o sea compilar
+[12/08/2026 22:13:33] [chat] [Darrent_Vantrell]: a
+[12/08/2026 22:13:35] [chat] [Darrent_Vantrell]: no es por id
+[12/08/2026 22:14:11] [chat] [Trent_Vantrell]: q
+[12/08/2026 22:14:12] [chat] [Darrent_Vantrell]: xd
+[12/08/2026 22:14:27] [chat] [Darrent_Vantrell]: es xq
+[12/08/2026 22:14:29] [chat] [Darrent_Vantrell]: no relogeamos
+[12/08/2026 22:14:31] [chat] [Darrent_Vantrell]: no relogeamos
+[12/08/2026 22:14:32] [chat] [Trent_Vantrell]: a
+[12/08/2026 22:14:37] [chat] [Darrent_Vantrell]: no es por id
+[12/08/2026 22:14:37] [chat] [Trent_Vantrell]: eramos lvl 1
+[12/08/2026 22:14:38] [chat] [Darrent_Vantrell]: q raro
+[12/08/2026 22:14:39] [chat] [Trent_Vantrell]: sera por eso
+[12/08/2026 22:14:40] [chat] [Darrent_Vantrell]: si
+[12/08/2026 22:14:42] [chat] [Darrent_Vantrell]: es x eso
+[12/08/2026 22:14:42] [chat] [Trent_Vantrell]: piola
+[12/08/2026 22:14:44] [chat] [Trent_Vantrell]: es aleatorio
+[12/08/2026 22:14:44] [chat] [Darrent_Vantrell]: eso mismo paso con jaimen
+[12/08/2026 22:14:48] [chat] [Darrent_Vantrell]: q loco
+[12/08/2026 22:14:50] [chat] [Darrent_Vantrell]: como hiciste
+[12/08/2026 22:14:54] [chat] [Trent_Vantrell]: no lo hice eso yo
+[12/08/2026 22:14:56] [chat] [Darrent_Vantrell]: xdd
+[12/08/2026 22:14:56] [chat] [Trent_Vantrell]: estaba asi
+[12/08/2026 22:14:58] [chat] [Darrent_Vantrell]: q raro
+[12/08/2026 22:15:01] [chat] [Darrent_Vantrell]: pero
+[12/08/2026 22:15:05] [chat] [Darrent_Vantrell]: esta gm cuando la bajaste?
+[12/08/2026 22:15:09] [chat] [Darrent_Vantrell]: tiene la ultima version de fz creo
+[12/08/2026 22:15:09] [chat] [Trent_Vantrell]: en 2024
+[12/08/2026 22:15:16] [chat] [Trent_Vantrell]: es una copia igual
+[12/08/2026 22:15:20] [chat] [Darrent_Vantrell]: esto lo habra hecho kanox y nunca lo subio capaz xd
+[12/08/2026 22:15:22] [chat] [Darrent_Vantrell]: lo de la largada
+[12/08/2026 22:15:24] [chat] [Trent_Vantrell]: una imitacion
+[12/08/2026 22:15:26] [chat] [Darrent_Vantrell]: si
+[12/08/2026 22:15:32] [chat] [Trent_Vantrell]: xd
+[12/08/2026 22:15:34] [chat] [Darrent_Vantrell]: relogeemos entonces
+[12/08/2026 22:15:37] [part] Trent_Vantrell has left the server (15:1)
+[12/08/2026 22:15:57] [part] Darrent_Vantrell has left the server (16:1)
+[12/08/2026 22:15:57] [connection] incoming connection: 200.117.56.42:54692 id: 15
+[12/08/2026 22:15:58] [join] Trent_Vantrell has joined the server (15:200.117.56.42)
+[12/08/2026 22:15:58] [nick] Trent_Vantrell nick changed to 20k52zLy0k2I12f
+[12/08/2026 22:16:20] [connection] incoming connection: 181.44.187.190:57467 id: 16
+[12/08/2026 22:16:20] [join] Darrent_Vantrell has joined the server (16:181.44.187.190)
+[12/08/2026 22:16:20] [nick] Darrent_Vantrell nick changed to 10ISRl0UzTJG586
+[12/08/2026 22:16:36] [chat] [20k52zLy0k2I12f]: sigue abierto esto
+[12/08/2026 22:16:54] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:16:58] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:17:05] [chat] [20k52zLy0k2I12f]:  /sskin
+[12/08/2026 22:17:07] [chat] [20k52zLy0k2I12f]:  /sskin
+[12/08/2026 22:17:13] [chat] [10ISRl0UzTJG586]: no me acuerdo la id xd
+[12/08/2026 22:17:14] [chat] [10ISRl0UzTJG586]: dsp veo
+[12/08/2026 22:17:27] [chat] [10ISRl0UzTJG586]: o sea q hay q esperar a q termine
+[12/08/2026 22:17:34] [chat] [20k52zLy0k2I12f]: dice q hay carrera en curso
+[12/08/2026 22:17:35] [chat] [20k52zLy0k2I12f]: se re bugeo
+[12/08/2026 22:17:36] [chat] [20k52zLy0k2I12f]: xddd
+[12/08/2026 22:17:51] [chat] [10ISRl0UzTJG586]: reinicio sv?
+[12/08/2026 22:18:23] [chat] [20k52zLy0k2I12f]: reinicia
+[12/08/2026 22:18:26] [chat] [20k52zLy0k2I12f]: no hay otra
+[12/08/2026 22:18:26] [chat] [10ISRl0UzTJG586]: ok
+[12/08/2026 22:18:29] [part] 10ISRl0UzTJG586 has left the server (16:1)
+[12/08/2026 22:18:35] [part] 20k52zLy0k2I12f has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[12/08/2026 22:18:59] 
+[12/08/2026 22:18:59] Server Plugins
+[12/08/2026 22:18:59] --------------
+[12/08/2026 22:18:59]  Loading plugin: streamer.dll
+[12/08/2026 22:18:59] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[12/08/2026 22:18:59]   Loaded.
+[12/08/2026 22:18:59]  Loading plugin: sscanf.dll
+[12/08/2026 22:18:59] 
+
+[12/08/2026 22:18:59]  ===============================
+
+[12/08/2026 22:18:59]       sscanf plugin loaded.     
+
+[12/08/2026 22:18:59]          Version:  2.8.3        
+
+[12/08/2026 22:18:59]   (c) 2018 Alex "Y_Less" Cole  
+
+[12/08/2026 22:18:59]  ===============================
+
+[12/08/2026 22:18:59]   Loaded.
+[12/08/2026 22:18:59]  Loading plugin: mysql.dll
+[12/08/2026 22:18:59]  >> plugin.mysql: R41-4 successfully loaded.
+[12/08/2026 22:18:59]   Loaded.
+[12/08/2026 22:18:59]  Loading plugin: pawnraknet.dll
+[12/08/2026 22:18:59] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[12/08/2026 22:18:59]   Loaded.
+[12/08/2026 22:18:59]  Loading plugin: pawncmd.dll
+[12/08/2026 22:18:59] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[12/08/2026 22:18:59]   Loaded.
+[12/08/2026 22:18:59]  Loading plugin: nativechecker.dll
+[12/08/2026 22:18:59]   Loaded.
+[12/08/2026 22:18:59]  Loaded 6 plugins.
+
+[12/08/2026 22:18:59] 
+[12/08/2026 22:18:59] Filterscripts
+[12/08/2026 22:18:59] ---------------
+[12/08/2026 22:18:59]   Loading filterscript 'Mapas.amx'...
+[12/08/2026 22:18:59]   Loading filterscript 'ls_elevator.amx'...
+[12/08/2026 22:18:59]   Loaded 2 filterscripts.
+
+[12/08/2026 22:18:59] ---------------------------------------------------------
+[12/08/2026 22:18:59]  	      fenixzone Roleplay - Versión v5.00 
+[12/08/2026 22:18:59]                s1.fenixzone.com - rol.fenixzone.com
+[12/08/2026 22:18:59] ---------------------------------------------------------
+[12/08/2026 22:18:59]  
+[12/08/2026 22:18:59] Number of vehicle models: 3
+[12/08/2026 22:19:01] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[12/08/2026 22:19:01] Autos a cargar: 261
+[12/08/2026 22:19:01] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[12/08/2026 22:19:01] [connection] incoming connection: 200.117.56.42:54694 id: 0
+[12/08/2026 22:19:02] [join] Trent_Vantrell has joined the server (0:200.117.56.42)
+[12/08/2026 22:19:02] [nick] Trent_Vantrell nick changed to C9ib5Ds098wr8E0
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54901 id: 1
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54902 id: 2
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54904 id: 3
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54903 id: 4
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54905 id: 5
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54906 id: 6
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54907 id: 7
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54908 id: 8
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54909 id: 9
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54911 id: 10
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54910 id: 11
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54912 id: 12
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54914 id: 13
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54913 id: 14
+[12/08/2026 22:19:02] [connection] incoming connection: 127.0.0.1:54915 id: 15
+[12/08/2026 22:19:02] [npc:join] .Motorman2 has joined the server (1:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Motorman1 has joined the server (4:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Sergio has joined the server (5:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Miguel has joined the server (6:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Marcelo has joined the server (7:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Alejandro has joined the server (8:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Camello1 has joined the server (9:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Angelica has joined the server (10:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .HippiePepe has joined the server (11:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Jorge has joined the server (12:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Ignacio has joined the server (14:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[12/08/2026 22:19:03] [npc:join] .Mao has joined the server (15:127.0.0.1)
+[12/08/2026 22:19:29] [connection] incoming connection: 181.44.187.190:61154 id: 16
+[12/08/2026 22:19:29] [join] Darrent_Vantrell has joined the server (16:181.44.187.190)
+[12/08/2026 22:19:29] [nick] Darrent_Vantrell nick changed to IP1nrx4VA4cvt0r
+[12/08/2026 22:19:30] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:31] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:33] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:36] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:37] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:46] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:47] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:48] [chat] [IP1nrx4VA4cvt0r]: hay q salir?
+[12/08/2026 22:19:49] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:19:51] [chat] [C9ib5Ds098wr8E0]: na
+[12/08/2026 22:19:55] [chat] [C9ib5Ds098wr8E0]: pone /carrera
+[12/08/2026 22:19:56] [chat] [IP1nrx4VA4cvt0r]: no tenemos boleto creo
+[12/08/2026 22:20:00] [chat] [C9ib5Ds098wr8E0]: ya estamos dentro igual
+[12/08/2026 22:20:02] [chat] [C9ib5Ds098wr8E0]: ya estamos dentro igual
+[12/08/2026 22:20:28] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:20:29] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:20:31] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:20:32] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:20:34] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:20:41] [chat] [IP1nrx4VA4cvt0r]: che la skin de cj siempre estuvo en samp
+[12/08/2026 22:20:42] [chat] [IP1nrx4VA4cvt0r]: ahora caigo
+[12/08/2026 22:20:46] [chat] [C9ib5Ds098wr8E0]: se
+[12/08/2026 22:20:49] [chat] [C9ib5Ds098wr8E0]: la 0
+[12/08/2026 22:20:50] [chat] [IP1nrx4VA4cvt0r]: ellos solo agregaron lo de editarle la ropa xd
+[12/08/2026 22:20:51] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:21:01] [chat] [C9ib5Ds098wr8E0]: claro, q se pueda usar player.img
+[12/08/2026 22:21:05] [chat] [C9ib5Ds098wr8E0]: toda la ropa y eso
+[12/08/2026 22:21:07] [chat] [IP1nrx4VA4cvt0r]: se
+[12/08/2026 22:21:20] [chat] [IP1nrx4VA4cvt0r]: sera skinshot?
+[12/08/2026 22:21:21] [chat] [IP1nrx4VA4cvt0r]: los autos xd
+[12/08/2026 22:21:32] [chat] [C9ib5Ds098wr8E0]: por nuestro ping si
+[12/08/2026 22:21:46] [chat] [C9ib5Ds098wr8E0]: a wayne
+[12/08/2026 22:21:47] [chat] [C9ib5Ds098wr8E0]: 220
+[12/08/2026 22:21:48] [chat] [IP1nrx4VA4cvt0r]: se
+[12/08/2026 22:21:50] [chat] [C9ib5Ds098wr8E0]: pq es de vzla
+[12/08/2026 22:21:51] [chat] [C9ib5Ds098wr8E0]: xddd
+[12/08/2026 22:21:55] [chat] [C9ib5Ds098wr8E0]: mathew igual
+[12/08/2026 22:21:59] [chat] [C9ib5Ds098wr8E0]: omar
+[12/08/2026 22:21:59] [chat] [IP1nrx4VA4cvt0r]: es verdad
+[12/08/2026 22:22:47] [nick] C9ib5Ds098wr8E0 nick changed to Trent_Vantrell
+[12/08/2026 22:23:16] [nick] IP1nrx4VA4cvt0r nick changed to Darrent_Vantrell
+[12/08/2026 22:24:33] [chat] [Trent_Vantrell]: 1:38
+[12/08/2026 22:24:35] [chat] [Trent_Vantrell]: xddddddddd
+[12/08/2026 22:24:36] [chat] [Darrent_Vantrell]: para mi q es por el ping
+[12/08/2026 22:24:40] [chat] [Trent_Vantrell]: na
+[12/08/2026 22:24:41] [chat] [Trent_Vantrell]: pero
+[12/08/2026 22:24:43] [chat] [Trent_Vantrell]: esta re mal
+[12/08/2026 22:24:44] [chat] [Darrent_Vantrell]: encima hasta el handling cambio
+[12/08/2026 22:24:50] [chat] [Trent_Vantrell]: si?
+[12/08/2026 22:24:51] [chat] [Darrent_Vantrell]: si
+[12/08/2026 22:24:52] [chat] [Darrent_Vantrell]: va re suave
+[12/08/2026 22:24:57] [chat] [Trent_Vantrell]: puede ser el ping no se
+[12/08/2026 22:25:02] sscanf warning: Format specifier does not match parameter count.
+[12/08/2026 22:25:03] [chat] [Darrent_Vantrell]: que tendriamos que hacer ahora
+[12/08/2026 22:25:16] [chat] [Trent_Vantrell]: y
+[12/08/2026 22:25:21] [chat] [Trent_Vantrell]: ponel ese panel
+[12/08/2026 22:25:22] [chat] [Trent_Vantrell]: o sea
+[12/08/2026 22:25:26] [chat] [Trent_Vantrell]: para inscribirse por lugar
+[12/08/2026 22:25:31] [chat] [Darrent_Vantrell]: si xq ahora es random
+[12/08/2026 22:25:46] [chat] [Darrent_Vantrell]: y lo de elegir hotring
+[12/08/2026 22:25:52] [chat] [Trent_Vantrell]: tambien
+[12/08/2026 22:25:53] [chat] [Darrent_Vantrell]: y el dl infinito
+[12/08/2026 22:26:01] [chat] [Darrent_Vantrell]: habria q ir viendo
+[12/08/2026 22:26:05] [chat] [Darrent_Vantrell]: voy a investigar un poco
+[12/08/2026 22:26:10] [chat] [Trent_Vantrell]: fijate
+[12/08/2026 22:26:12] [chat] [Trent_Vantrell]: en pawno
+[12/08/2026 22:26:14] [chat] [Trent_Vantrell]: busca en la gm
+[12/08/2026 22:26:21] [chat] [Trent_Vantrell]: aparece la id de los hotrings
+[12/08/2026 22:26:24] [chat] [Trent_Vantrell]: o sea los 10 lugares
+[12/08/2026 22:26:26] [chat] [Darrent_Vantrell]: si
+[12/08/2026 22:26:30] [chat] [Trent_Vantrell]: 494 creo q es el coleon
+[12/08/2026 22:26:31] [chat] [Darrent_Vantrell]: algo le voy a pasar a la ia
+[12/08/2026 22:26:37] [chat] [Darrent_Vantrell]: para ver si puede hacerlo
+[12/08/2026 22:26:48] [chat] [Darrent_Vantrell]: voy off
+[12/08/2026 22:26:51] [chat] [Trent_Vantrell]: dale
+[12/08/2026 22:26:52] [part] Darrent_Vantrell has left the server (16:1)
+[12/08/2026 22:26:56] [part] Trent_Vantrell has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[12/08/2026 22:42:45] 
+[12/08/2026 22:42:45] Server Plugins
+[12/08/2026 22:42:45] --------------
+[12/08/2026 22:42:45]  Loading plugin: streamer.dll
+[12/08/2026 22:42:45] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[12/08/2026 22:42:45]   Loaded.
+[12/08/2026 22:42:45]  Loading plugin: sscanf.dll
+[12/08/2026 22:42:45] 
+
+[12/08/2026 22:42:45]  ===============================
+
+[12/08/2026 22:42:45]       sscanf plugin loaded.     
+
+[12/08/2026 22:42:45]          Version:  2.8.3        
+
+[12/08/2026 22:42:45]   (c) 2018 Alex "Y_Less" Cole  
+
+[12/08/2026 22:42:45]  ===============================
+
+[12/08/2026 22:42:45]   Loaded.
+[12/08/2026 22:42:45]  Loading plugin: mysql.dll
+[12/08/2026 22:42:45]  >> plugin.mysql: R41-4 successfully loaded.
+[12/08/2026 22:42:45]   Loaded.
+[12/08/2026 22:42:45]  Loading plugin: pawnraknet.dll
+[12/08/2026 22:42:45] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[12/08/2026 22:42:45]   Loaded.
+[12/08/2026 22:42:45]  Loading plugin: pawncmd.dll
+[12/08/2026 22:42:45] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[12/08/2026 22:42:45]   Loaded.
+[12/08/2026 22:42:45]  Loading plugin: nativechecker.dll
+[12/08/2026 22:42:45]   Loaded.
+[12/08/2026 22:42:45]  Loaded 6 plugins.
+
+[12/08/2026 22:42:45] 
+[12/08/2026 22:42:45] Filterscripts
+[12/08/2026 22:42:45] ---------------
+[12/08/2026 22:42:45]   Loading filterscript 'Mapas.amx'...
+[12/08/2026 22:42:45]   Loading filterscript 'ls_elevator.amx'...
+[12/08/2026 22:42:45]   Loaded 2 filterscripts.
+
+[12/08/2026 22:42:45] ---------------------------------------------------------
+[12/08/2026 22:42:45]  	      fenixzone Roleplay - Versión v5.00 
+[12/08/2026 22:42:45]                s1.fenixzone.com - rol.fenixzone.com
+[12/08/2026 22:42:45] ---------------------------------------------------------
+[12/08/2026 22:42:45]  
+[12/08/2026 22:42:45] Number of vehicle models: 3
+[12/08/2026 22:42:47] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[12/08/2026 22:42:47] Autos a cargar: 261
+[12/08/2026 22:42:47] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[12/08/2026 22:42:48] [connection] incoming connection: 127.0.0.1:60942 id: 0
+[12/08/2026 22:42:48] [connection] incoming connection: 127.0.0.1:60944 id: 1
+[12/08/2026 22:42:48] [connection] incoming connection: 127.0.0.1:60943 id: 2
+[12/08/2026 22:42:48] [connection] incoming connection: 127.0.0.1:60945 id: 3
+[12/08/2026 22:42:48] [connection] incoming connection: 127.0.0.1:60946 id: 4
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60947 id: 5
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60948 id: 6
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60949 id: 7
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60950 id: 8
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60951 id: 9
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60952 id: 10
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60953 id: 11
+[12/08/2026 22:42:49] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Motorman2 has joined the server (2:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Motorman3 has joined the server (1:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60954 id: 12
+[12/08/2026 22:42:49] [npc:join] .Sergio has joined the server (4:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Miguel has joined the server (5:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Marcelo has joined the server (6:127.0.0.1)
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60956 id: 13
+[12/08/2026 22:42:49] [connection] incoming connection: 127.0.0.1:60955 id: 14
+[12/08/2026 22:42:49] [npc:join] .Alejandro has joined the server (7:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Camello1 has joined the server (8:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .HippiePepe has joined the server (9:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Angelica has joined the server (11:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Jorge has joined the server (10:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Mao has joined the server (13:127.0.0.1)
+[12/08/2026 22:42:49] [npc:join] .Hugo has joined the server (14:127.0.0.1)
+[12/08/2026 22:43:12] [connection] incoming connection: 181.44.187.190:63484 id: 15
+[12/08/2026 22:43:12] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[12/08/2026 22:43:12] [nick] Darrent_Vantrell nick changed to N8F2R04U15Pt282
+[12/08/2026 22:45:14] [part] N8F2R04U15Pt282 has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[12/08/2026 22:47:13] 
+[12/08/2026 22:47:13] Server Plugins
+[12/08/2026 22:47:13] --------------
+[12/08/2026 22:47:13]  Loading plugin: streamer.dll
+[12/08/2026 22:47:13] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[12/08/2026 22:47:13]   Loaded.
+[12/08/2026 22:47:13]  Loading plugin: sscanf.dll
+[12/08/2026 22:47:13] 
+
+[12/08/2026 22:47:13]  ===============================
+
+[12/08/2026 22:47:13]       sscanf plugin loaded.     
+
+[12/08/2026 22:47:13]          Version:  2.8.3        
+
+[12/08/2026 22:47:13]   (c) 2018 Alex "Y_Less" Cole  
+
+[12/08/2026 22:47:13]  ===============================
+
+[12/08/2026 22:47:13]   Loaded.
+[12/08/2026 22:47:13]  Loading plugin: mysql.dll
+[12/08/2026 22:47:13]  >> plugin.mysql: R41-4 successfully loaded.
+[12/08/2026 22:47:13]   Loaded.
+[12/08/2026 22:47:13]  Loading plugin: pawnraknet.dll
+[12/08/2026 22:47:13] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[12/08/2026 22:47:13]   Loaded.
+[12/08/2026 22:47:13]  Loading plugin: pawncmd.dll
+[12/08/2026 22:47:13] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[12/08/2026 22:47:13]   Loaded.
+[12/08/2026 22:47:13]  Loading plugin: nativechecker.dll
+[12/08/2026 22:47:13]   Loaded.
+[12/08/2026 22:47:13]  Loaded 6 plugins.
+
+[12/08/2026 22:47:13] 
+[12/08/2026 22:47:13] Filterscripts
+[12/08/2026 22:47:13] ---------------
+[12/08/2026 22:47:13]   Loading filterscript 'Mapas.amx'...
+[12/08/2026 22:47:13]   Loading filterscript 'ls_elevator.amx'...
+[12/08/2026 22:47:13]   Loaded 2 filterscripts.
+
+[12/08/2026 22:47:13] ---------------------------------------------------------
+[12/08/2026 22:47:13]  	      fenixzone Roleplay - Versión v5.00 
+[12/08/2026 22:47:13]                s1.fenixzone.com - rol.fenixzone.com
+[12/08/2026 22:47:13] ---------------------------------------------------------
+[12/08/2026 22:47:13]  
+[12/08/2026 22:47:13] Number of vehicle models: 3
+[12/08/2026 22:47:15] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[12/08/2026 22:47:15] Autos a cargar: 261
+[12/08/2026 22:47:15] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61197 id: 0
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61198 id: 1
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61199 id: 2
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61200 id: 3
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61202 id: 4
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61201 id: 5
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61203 id: 6
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61204 id: 7
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61205 id: 8
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61206 id: 9
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61207 id: 10
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61208 id: 11
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61209 id: 12
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61210 id: 13
+[12/08/2026 22:47:16] [connection] incoming connection: 127.0.0.1:61211 id: 14
+[12/08/2026 22:47:16] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Motorman2 has joined the server (1:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Sergio has joined the server (5:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Miguel has joined the server (4:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Marcelo has joined the server (6:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Alejandro has joined the server (7:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Camello1 has joined the server (8:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .HippiePepe has joined the server (9:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Angelica has joined the server (10:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Jorge has joined the server (11:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[12/08/2026 22:47:16] [npc:join] .Mao has joined the server (14:127.0.0.1)
+[12/08/2026 22:48:00] [connection] incoming connection: 181.44.187.190:59032 id: 15
+[12/08/2026 22:48:01] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[12/08/2026 22:48:01] [nick] Darrent_Vantrell nick changed to vNBBTp1Gpj5A0F1
+[12/08/2026 22:49:50] [part] vNBBTp1Gpj5A0F1 has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[12/08/2026 23:16:50] 
+[12/08/2026 23:16:50] Server Plugins
+[12/08/2026 23:16:50] --------------
+[12/08/2026 23:16:50]  Loading plugin: streamer.dll
+[12/08/2026 23:16:50] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[12/08/2026 23:16:50]   Loaded.
+[12/08/2026 23:16:50]  Loading plugin: sscanf.dll
+[12/08/2026 23:16:50] 
+
+[12/08/2026 23:16:50]  ===============================
+
+[12/08/2026 23:16:50]       sscanf plugin loaded.     
+
+[12/08/2026 23:16:50]          Version:  2.8.3        
+
+[12/08/2026 23:16:50]   (c) 2018 Alex "Y_Less" Cole  
+
+[12/08/2026 23:16:50]  ===============================
+
+[12/08/2026 23:16:50]   Loaded.
+[12/08/2026 23:16:50]  Loading plugin: mysql.dll
+[12/08/2026 23:16:50]  >> plugin.mysql: R41-4 successfully loaded.
+[12/08/2026 23:16:50]   Loaded.
+[12/08/2026 23:16:50]  Loading plugin: pawnraknet.dll
+[12/08/2026 23:16:50] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[12/08/2026 23:16:50]   Loaded.
+[12/08/2026 23:16:50]  Loading plugin: pawncmd.dll
+[12/08/2026 23:16:50] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[12/08/2026 23:16:50]   Loaded.
+[12/08/2026 23:16:50]  Loading plugin: nativechecker.dll
+[12/08/2026 23:16:50]   Loaded.
+[12/08/2026 23:16:50]  Loaded 6 plugins.
+
+[12/08/2026 23:16:50] 
+[12/08/2026 23:16:50] Filterscripts
+[12/08/2026 23:16:50] ---------------
+[12/08/2026 23:16:50]   Loading filterscript 'Mapas.amx'...
+[12/08/2026 23:16:50]   Loading filterscript 'ls_elevator.amx'...
+[12/08/2026 23:16:50]   Loaded 2 filterscripts.
+
+[12/08/2026 23:16:50] ---------------------------------------------------------
+[12/08/2026 23:16:50]  	      fenixzone Roleplay - Versión v5.00 
+[12/08/2026 23:16:50]                s1.fenixzone.com - rol.fenixzone.com
+[12/08/2026 23:16:50] ---------------------------------------------------------
+[12/08/2026 23:16:50]  
+[12/08/2026 23:16:50] Number of vehicle models: 3
+[12/08/2026 23:16:53] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[12/08/2026 23:16:53] Autos a cargar: 261
+[12/08/2026 23:16:53] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54171 id: 0
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54172 id: 1
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54173 id: 2
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54174 id: 3
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54175 id: 4
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54176 id: 5
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54178 id: 6
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54177 id: 7
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54179 id: 8
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54180 id: 9
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54182 id: 10
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54181 id: 11
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54183 id: 12
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54184 id: 13
+[12/08/2026 23:16:54] [connection] incoming connection: 127.0.0.1:54185 id: 14
+[12/08/2026 23:16:54] [npc:join] .Motorman2 has joined the server (0:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Motorman1 has joined the server (1:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Sergio has joined the server (4:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Miguel has joined the server (5:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Alejandro has joined the server (6:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Marcelo has joined the server (7:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Camello1 has joined the server (8:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .HippiePepe has joined the server (9:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Jorge has joined the server (10:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Angelica has joined the server (11:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[12/08/2026 23:16:54] [npc:join] .Mao has joined the server (14:127.0.0.1)
+[12/08/2026 23:17:20] [connection] incoming connection: 181.44.187.190:60811 id: 15
+[12/08/2026 23:17:20] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[12/08/2026 23:17:20] [nick] Darrent_Vantrell nick changed to 9ZN6Dw7a8L30993
+[12/08/2026 23:21:01] [part] 9ZN6Dw7a8L30993 has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[13/08/2026 17:43:32] 
+[13/08/2026 17:43:32] Server Plugins
+[13/08/2026 17:43:32] --------------
+[13/08/2026 17:43:32]  Loading plugin: streamer.dll
+[13/08/2026 17:43:32] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[13/08/2026 17:43:32]   Loaded.
+[13/08/2026 17:43:32]  Loading plugin: sscanf.dll
+[13/08/2026 17:43:32] 
+
+[13/08/2026 17:43:32]  ===============================
+
+[13/08/2026 17:43:32]       sscanf plugin loaded.     
+
+[13/08/2026 17:43:32]          Version:  2.8.3        
+
+[13/08/2026 17:43:32]   (c) 2018 Alex "Y_Less" Cole  
+
+[13/08/2026 17:43:32]  ===============================
+
+[13/08/2026 17:43:32]   Loaded.
+[13/08/2026 17:43:32]  Loading plugin: mysql.dll
+[13/08/2026 17:43:33]  >> plugin.mysql: R41-4 successfully loaded.
+[13/08/2026 17:43:33]   Loaded.
+[13/08/2026 17:43:33]  Loading plugin: pawnraknet.dll
+[13/08/2026 17:43:33] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[13/08/2026 17:43:33]   Loaded.
+[13/08/2026 17:43:33]  Loading plugin: pawncmd.dll
+[13/08/2026 17:43:33] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[13/08/2026 17:43:33]   Loaded.
+[13/08/2026 17:43:33]  Loading plugin: nativechecker.dll
+[13/08/2026 17:43:33]   Loaded.
+[13/08/2026 17:43:33]  Loaded 6 plugins.
+
+[13/08/2026 17:43:34] 
+[13/08/2026 17:43:34] Filterscripts
+[13/08/2026 17:43:34] ---------------
+[13/08/2026 17:43:34]   Loading filterscript 'Mapas.amx'...
+[13/08/2026 17:43:34]   Loading filterscript 'ls_elevator.amx'...
+[13/08/2026 17:43:34]   Loaded 2 filterscripts.
+
+[13/08/2026 17:43:34] ---------------------------------------------------------
+[13/08/2026 17:43:34]  	      fenixzone Roleplay - Versión v5.00 
+[13/08/2026 17:43:34]                s1.fenixzone.com - rol.fenixzone.com
+[13/08/2026 17:43:34] ---------------------------------------------------------
+[13/08/2026 17:43:34]  
+[13/08/2026 17:43:34] Number of vehicle models: 3
+[13/08/2026 17:43:37] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[13/08/2026 17:43:37] Autos a cargar: 261
+[13/08/2026 17:43:37] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[13/08/2026 17:43:37] [connection] incoming connection: 127.0.0.1:54467 id: 0
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54469 id: 1
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54468 id: 2
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54470 id: 3
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54472 id: 4
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54471 id: 5
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54473 id: 6
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54474 id: 7
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54475 id: 8
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54477 id: 9
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54480 id: 10
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54479 id: 11
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54476 id: 12
+[13/08/2026 17:43:38] [npc:join] .Motorman3 has joined the server (0:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Motorman4 has joined the server (1:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Motorman2 has joined the server (2:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Miguel has joined the server (3:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Motorman1 has joined the server (5:127.0.0.1)
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54478 id: 13
+[13/08/2026 17:43:38] [npc:join] .Sergio has joined the server (4:127.0.0.1)
+[13/08/2026 17:43:38] [connection] incoming connection: 127.0.0.1:54481 id: 14
+[13/08/2026 17:43:38] [npc:join] .Jorge has joined the server (6:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .HippiePepe has joined the server (7:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Alejandro has joined the server (8:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Angelica has joined the server (12:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Marcelo has joined the server (9:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Ignacio has joined the server (10:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Camello1 has joined the server (11:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[13/08/2026 17:43:38] [npc:join] .Mao has joined the server (14:127.0.0.1)
+[13/08/2026 17:44:35] [connection] incoming connection: 181.44.187.190:49983 id: 15
+[13/08/2026 17:44:35] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[13/08/2026 17:44:35] [nick] Darrent_Vantrell nick changed to U87506VZT343gA0
+[13/08/2026 17:48:24] [nick] U87506VZT343gA0 nick changed to Darrent_Vantrell
+[13/08/2026 17:48:37] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:58:29] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:58:46] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:58:58] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:58:59] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:01] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:02] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:04] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:06] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:08] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:10] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:13] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:15] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:17] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:19] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:22] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:25] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 17:59:31] sscanf warning: Format specifier does not match parameter count.
+[13/08/2026 18:00:06] [part] Darrent_Vantrell has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[13/08/2026 22:03:03] 
+[13/08/2026 22:03:03] Server Plugins
+[13/08/2026 22:03:03] --------------
+[13/08/2026 22:03:03]  Loading plugin: streamer.dll
+[13/08/2026 22:03:03] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[13/08/2026 22:03:03]   Loaded.
+[13/08/2026 22:03:03]  Loading plugin: sscanf.dll
+[13/08/2026 22:03:03] 
+
+[13/08/2026 22:03:03]  ===============================
+
+[13/08/2026 22:03:03]       sscanf plugin loaded.     
+
+[13/08/2026 22:03:03]          Version:  2.8.3        
+
+[13/08/2026 22:03:03]   (c) 2018 Alex "Y_Less" Cole  
+
+[13/08/2026 22:03:03]  ===============================
+
+[13/08/2026 22:03:03]   Loaded.
+[13/08/2026 22:03:03]  Loading plugin: mysql.dll
+[13/08/2026 22:03:03]  >> plugin.mysql: R41-4 successfully loaded.
+[13/08/2026 22:03:03]   Loaded.
+[13/08/2026 22:03:03]  Loading plugin: pawnraknet.dll
+[13/08/2026 22:03:03] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[13/08/2026 22:03:03]   Loaded.
+[13/08/2026 22:03:03]  Loading plugin: pawncmd.dll
+[13/08/2026 22:03:03] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[13/08/2026 22:03:03]   Loaded.
+[13/08/2026 22:03:03]  Loading plugin: nativechecker.dll
+[13/08/2026 22:03:03]   Loaded.
+[13/08/2026 22:03:03]  Loaded 6 plugins.
+
+[13/08/2026 22:03:03] 
+[13/08/2026 22:03:03] Filterscripts
+[13/08/2026 22:03:03] ---------------
+[13/08/2026 22:03:03]   Loading filterscript 'Mapas.amx'...
+[13/08/2026 22:03:03]   Loading filterscript 'ls_elevator.amx'...
+[13/08/2026 22:03:03]   Loaded 2 filterscripts.
+
+[13/08/2026 22:03:03] ---------------------------------------------------------
+[13/08/2026 22:03:03]  	      fenixzone Roleplay - Versión v5.00 
+[13/08/2026 22:03:03]                s1.fenixzone.com - rol.fenixzone.com
+[13/08/2026 22:03:03] ---------------------------------------------------------
+[13/08/2026 22:03:03]  
+[13/08/2026 22:03:03] Number of vehicle models: 3
+[13/08/2026 22:03:06] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[13/08/2026 22:03:06] Autos a cargar: 261
+[13/08/2026 22:03:06] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51577 id: 0
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51576 id: 1
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51572 id: 2
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51573 id: 3
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51574 id: 4
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51578 id: 5
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51575 id: 6
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51579 id: 7
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51580 id: 8
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51582 id: 9
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51581 id: 10
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51583 id: 11
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51585 id: 12
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51584 id: 13
+[13/08/2026 22:03:07] [connection] incoming connection: 127.0.0.1:51586 id: 14
+[13/08/2026 22:03:07] [npc:join] .Camello1 has joined the server (2:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Miguel has joined the server (3:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Sergio has joined the server (6:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Motorman2 has joined the server (4:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Marcelo has joined the server (0:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Motorman4 has joined the server (1:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Alejandro has joined the server (5:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Motorman3 has joined the server (7:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .HippiePepe has joined the server (8:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Angelica has joined the server (9:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Motorman1 has joined the server (10:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Hugo has joined the server (11:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Mao has joined the server (13:127.0.0.1)
+[13/08/2026 22:03:07] [npc:join] .Jorge has joined the server (14:127.0.0.1)
+[13/08/2026 22:03:43] [connection] incoming connection: 181.44.187.190:58373 id: 15
+[13/08/2026 22:03:43] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[13/08/2026 22:03:43] [nick] Darrent_Vantrell nick changed to sXETdmib2L8i99A
+[13/08/2026 22:04:27] [chat] [sXETdmib2L8i99A]: asdad
+[13/08/2026 22:07:31] [nick] sXETdmib2L8i99A nick changed to Darrent_Vantrell
+[13/08/2026 22:08:42] [part] Darrent_Vantrell has left the server (15:1)
+[13/08/2026 22:18:10] [connection] incoming connection: 181.44.187.190:57986 id: 15
+[13/08/2026 22:18:10] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[13/08/2026 22:18:10] [nick] Darrent_Vantrell nick changed to 830eCKqy9N90r2C
+[13/08/2026 22:20:08] [part] 830eCKqy9N90r2C has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[13/08/2026 22:42:15] 
+[13/08/2026 22:42:15] Server Plugins
+[13/08/2026 22:42:15] --------------
+[13/08/2026 22:42:15]  Loading plugin: streamer.dll
+[13/08/2026 22:42:15] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[13/08/2026 22:42:15]   Loaded.
+[13/08/2026 22:42:15]  Loading plugin: sscanf.dll
+[13/08/2026 22:42:15] 
+
+[13/08/2026 22:42:15]  ===============================
+
+[13/08/2026 22:42:15]       sscanf plugin loaded.     
+
+[13/08/2026 22:42:15]          Version:  2.8.3        
+
+[13/08/2026 22:42:15]   (c) 2018 Alex "Y_Less" Cole  
+
+[13/08/2026 22:42:15]  ===============================
+
+[13/08/2026 22:42:15]   Loaded.
+[13/08/2026 22:42:15]  Loading plugin: mysql.dll
+[13/08/2026 22:42:15]  >> plugin.mysql: R41-4 successfully loaded.
+[13/08/2026 22:42:15]   Loaded.
+[13/08/2026 22:42:15]  Loading plugin: pawnraknet.dll
+[13/08/2026 22:42:15] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[13/08/2026 22:42:15]   Loaded.
+[13/08/2026 22:42:15]  Loading plugin: pawncmd.dll
+[13/08/2026 22:42:15] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[13/08/2026 22:42:15]   Loaded.
+[13/08/2026 22:42:15]  Loading plugin: nativechecker.dll
+[13/08/2026 22:42:15]   Loaded.
+[13/08/2026 22:42:15]  Loaded 6 plugins.
+
+[13/08/2026 22:42:15] 
+[13/08/2026 22:42:15] Filterscripts
+[13/08/2026 22:42:15] ---------------
+[13/08/2026 22:42:15]   Loading filterscript 'Mapas.amx'...
+[13/08/2026 22:42:15]   Loading filterscript 'ls_elevator.amx'...
+[13/08/2026 22:42:15]   Loaded 2 filterscripts.
+
+[13/08/2026 22:42:15] ---------------------------------------------------------
+[13/08/2026 22:42:15]  	      fenixzone Roleplay - Versión v5.00 
+[13/08/2026 22:42:15]                s1.fenixzone.com - rol.fenixzone.com
+[13/08/2026 22:42:15] ---------------------------------------------------------
+[13/08/2026 22:42:15]  
+[13/08/2026 22:42:15] Number of vehicle models: 3
+[13/08/2026 22:42:17] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[13/08/2026 22:42:17] Autos a cargar: 261
+[13/08/2026 22:42:17] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[13/08/2026 22:42:18] [connection] incoming connection: 127.0.0.1:49199 id: 0
+[13/08/2026 22:42:18] [connection] incoming connection: 127.0.0.1:49200 id: 1
+[13/08/2026 22:42:18] [connection] incoming connection: 127.0.0.1:49201 id: 2
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:49202 id: 3
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50881 id: 4
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50882 id: 5
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50883 id: 6
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50884 id: 7
+[13/08/2026 22:42:19] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Motorman3 has joined the server (1:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Motorman2 has joined the server (2:127.0.0.1)
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50885 id: 8
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50887 id: 9
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50886 id: 10
+[13/08/2026 22:42:19] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50889 id: 11
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50888 id: 12
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50890 id: 13
+[13/08/2026 22:42:19] [connection] incoming connection: 127.0.0.1:50891 id: 14
+[13/08/2026 22:42:19] [npc:join] .Sergio has joined the server (4:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Marcelo has joined the server (5:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Miguel has joined the server (6:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Alejandro has joined the server (7:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Camello1 has joined the server (8:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Angelica has joined the server (9:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .HippiePepe has joined the server (10:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Jorge has joined the server (11:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Mao has joined the server (13:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[13/08/2026 22:42:19] [npc:join] .Hugo has joined the server (14:127.0.0.1)
+[13/08/2026 22:42:46] [connection] incoming connection: 181.44.187.190:51929 id: 15
+[13/08/2026 22:42:46] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[13/08/2026 22:42:46] [nick] Darrent_Vantrell nick changed to LX078Gybl0jZQL2
+[13/08/2026 22:46:32] [nick] LX078Gybl0jZQL2 nick changed to Darrent_Vantrell
+[13/08/2026 22:48:25] [part] Darrent_Vantrell has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[13/08/2026 23:17:02] 
+[13/08/2026 23:17:02] Server Plugins
+[13/08/2026 23:17:02] --------------
+[13/08/2026 23:17:02]  Loading plugin: streamer.dll
+[13/08/2026 23:17:02] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[13/08/2026 23:17:02]   Loaded.
+[13/08/2026 23:17:02]  Loading plugin: sscanf.dll
+[13/08/2026 23:17:02] 
+
+[13/08/2026 23:17:02]  ===============================
+
+[13/08/2026 23:17:02]       sscanf plugin loaded.     
+
+[13/08/2026 23:17:02]          Version:  2.8.3        
+
+[13/08/2026 23:17:02]   (c) 2018 Alex "Y_Less" Cole  
+
+[13/08/2026 23:17:02]  ===============================
+
+[13/08/2026 23:17:02]   Loaded.
+[13/08/2026 23:17:02]  Loading plugin: mysql.dll
+[13/08/2026 23:17:02]  >> plugin.mysql: R41-4 successfully loaded.
+[13/08/2026 23:17:02]   Loaded.
+[13/08/2026 23:17:02]  Loading plugin: pawnraknet.dll
+[13/08/2026 23:17:02] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[13/08/2026 23:17:02]   Loaded.
+[13/08/2026 23:17:02]  Loading plugin: pawncmd.dll
+[13/08/2026 23:17:02] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[13/08/2026 23:17:02]   Loaded.
+[13/08/2026 23:17:02]  Loading plugin: nativechecker.dll
+[13/08/2026 23:17:02]   Loaded.
+[13/08/2026 23:17:02]  Loaded 6 plugins.
+
+[13/08/2026 23:17:02] 
+[13/08/2026 23:17:02] Filterscripts
+[13/08/2026 23:17:02] ---------------
+[13/08/2026 23:17:02]   Loading filterscript 'Mapas.amx'...
+[13/08/2026 23:17:02]   Loading filterscript 'ls_elevator.amx'...
+[13/08/2026 23:17:02]   Loaded 2 filterscripts.
+
+[13/08/2026 23:17:02] ---------------------------------------------------------
+[13/08/2026 23:17:02]  	      fenixzone Roleplay - Versión v5.00 
+[13/08/2026 23:17:02]                s1.fenixzone.com - rol.fenixzone.com
+[13/08/2026 23:17:02] ---------------------------------------------------------
+[13/08/2026 23:17:02]  
+[13/08/2026 23:17:02] Number of vehicle models: 3
+[13/08/2026 23:17:04] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[13/08/2026 23:17:04] Autos a cargar: 261
+[13/08/2026 23:17:04] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58355 id: 0
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58356 id: 1
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58357 id: 2
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58359 id: 3
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58358 id: 4
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58360 id: 5
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58361 id: 6
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58362 id: 7
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58363 id: 8
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58364 id: 9
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58365 id: 10
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58366 id: 11
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58367 id: 12
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58369 id: 13
+[13/08/2026 23:17:05] [connection] incoming connection: 127.0.0.1:58368 id: 14
+[13/08/2026 23:17:05] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[13/08/2026 23:17:05] [npc:join] .Motorman2 has joined the server (1:127.0.0.1)
+[13/08/2026 23:17:05] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Sergio has joined the server (3:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Motorman4 has joined the server (4:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Miguel has joined the server (5:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Marcelo has joined the server (6:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Alejandro has joined the server (7:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Camello1 has joined the server (8:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .HippiePepe has joined the server (9:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Angelica has joined the server (10:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Jorge has joined the server (11:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Mao has joined the server (13:127.0.0.1)
+[13/08/2026 23:17:06] [npc:join] .Hugo has joined the server (14:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[13/08/2026 23:18:48] 
+[13/08/2026 23:18:48] Server Plugins
+[13/08/2026 23:18:48] --------------
+[13/08/2026 23:18:48]  Loading plugin: streamer.dll
+[13/08/2026 23:18:48] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[13/08/2026 23:18:48]   Loaded.
+[13/08/2026 23:18:48]  Loading plugin: sscanf.dll
+[13/08/2026 23:18:48] 
+
+[13/08/2026 23:18:48]  ===============================
+
+[13/08/2026 23:18:48]       sscanf plugin loaded.     
+
+[13/08/2026 23:18:48]          Version:  2.8.3        
+
+[13/08/2026 23:18:48]   (c) 2018 Alex "Y_Less" Cole  
+
+[13/08/2026 23:18:48]  ===============================
+
+[13/08/2026 23:18:48]   Loaded.
+[13/08/2026 23:18:48]  Loading plugin: mysql.dll
+[13/08/2026 23:18:48]  >> plugin.mysql: R41-4 successfully loaded.
+[13/08/2026 23:18:48]   Loaded.
+[13/08/2026 23:18:48]  Loading plugin: pawnraknet.dll
+[13/08/2026 23:18:48] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[13/08/2026 23:18:48]   Loaded.
+[13/08/2026 23:18:48]  Loading plugin: pawncmd.dll
+[13/08/2026 23:18:48] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[13/08/2026 23:18:48]   Loaded.
+[13/08/2026 23:18:48]  Loading plugin: nativechecker.dll
+[13/08/2026 23:18:48]   Loaded.
+[13/08/2026 23:18:48]  Loaded 6 plugins.
+
+[13/08/2026 23:18:48] 
+[13/08/2026 23:18:48] Filterscripts
+[13/08/2026 23:18:48] ---------------
+[13/08/2026 23:18:48]   Loading filterscript 'Mapas.amx'...
+[13/08/2026 23:18:48]   Loading filterscript 'ls_elevator.amx'...
+[13/08/2026 23:18:48]   Loaded 2 filterscripts.
+
+[13/08/2026 23:18:48] ---------------------------------------------------------
+[13/08/2026 23:18:48]  	      fenixzone Roleplay - Versión v5.00 
+[13/08/2026 23:18:48]                s1.fenixzone.com - rol.fenixzone.com
+[13/08/2026 23:18:48] ---------------------------------------------------------
+[13/08/2026 23:18:48]  
+[13/08/2026 23:18:48] Number of vehicle models: 3
+[13/08/2026 23:18:50] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[13/08/2026 23:18:50] Autos a cargar: 261
+[13/08/2026 23:18:50] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57497 id: 0
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57498 id: 1
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57499 id: 2
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57500 id: 3
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57501 id: 4
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57502 id: 5
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57503 id: 6
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57505 id: 7
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57504 id: 8
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57506 id: 9
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57507 id: 10
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57508 id: 11
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57509 id: 12
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57510 id: 13
+[13/08/2026 23:18:52] [connection] incoming connection: 127.0.0.1:57511 id: 14
+[13/08/2026 23:18:52] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Motorman2 has joined the server (1:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Motorman3 has joined the server (2:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Motorman4 has joined the server (3:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Sergio has joined the server (4:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Marcelo has joined the server (6:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Miguel has joined the server (5:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Camello1 has joined the server (7:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Alejandro has joined the server (8:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .HippiePepe has joined the server (9:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Angelica has joined the server (10:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Jorge has joined the server (11:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[13/08/2026 23:18:52] [npc:join] .Mao has joined the server (14:127.0.0.1)
+[13/08/2026 23:19:32] [connection] incoming connection: 181.44.187.190:53040 id: 15
+[13/08/2026 23:19:32] [join] Darrent_Vantrell has joined the server (15:181.44.187.190)
+[13/08/2026 23:19:32] [nick] Darrent_Vantrell nick changed to UWcV5fIj66T4E0x
+[13/08/2026 23:23:22] [nick] UWcV5fIj66T4E0x nick changed to Darrent_Vantrell
+[13/08/2026 23:24:56] [part] Darrent_Vantrell has left the server (15:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[13/08/2026 23:29:35] 
+[13/08/2026 23:29:35] Server Plugins
+[13/08/2026 23:29:35] --------------
+[13/08/2026 23:29:35]  Loading plugin: streamer.dll
+[13/08/2026 23:29:35] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[13/08/2026 23:29:35]   Loaded.
+[13/08/2026 23:29:35]  Loading plugin: sscanf.dll
+[13/08/2026 23:29:35] 
+
+[13/08/2026 23:29:35]  ===============================
+
+[13/08/2026 23:29:35]       sscanf plugin loaded.     
+
+[13/08/2026 23:29:35]          Version:  2.8.3        
+
+[13/08/2026 23:29:35]   (c) 2018 Alex "Y_Less" Cole  
+
+[13/08/2026 23:29:35]  ===============================
+
+[13/08/2026 23:29:35]   Loaded.
+[13/08/2026 23:29:35]  Loading plugin: mysql.dll
+[13/08/2026 23:29:35]  >> plugin.mysql: R41-4 successfully loaded.
+[13/08/2026 23:29:35]   Loaded.
+[13/08/2026 23:29:35]  Loading plugin: pawnraknet.dll
+[13/08/2026 23:29:35] Pawn.RakNet plugin v1.3.0 by urShadow has been loaded
+[13/08/2026 23:29:35]   Loaded.
+[13/08/2026 23:29:35]  Loading plugin: pawncmd.dll
+[13/08/2026 23:29:35] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[13/08/2026 23:29:35]   Loaded.
+[13/08/2026 23:29:35]  Loading plugin: nativechecker.dll
+[13/08/2026 23:29:35]   Loaded.
+[13/08/2026 23:29:35]  Loaded 6 plugins.
+
+[13/08/2026 23:29:35] 
+[13/08/2026 23:29:35] Filterscripts
+[13/08/2026 23:29:35] ---------------
+[13/08/2026 23:29:35]   Loading filterscript 'Mapas.amx'...
+[13/08/2026 23:29:35]   Loading filterscript 'ls_elevator.amx'...
+[13/08/2026 23:29:35]   Loaded 2 filterscripts.
+
+[13/08/2026 23:29:35] ---------------------------------------------------------
+[13/08/2026 23:29:35]  	      fenixzone Roleplay - Versión v5.00 
+[13/08/2026 23:29:35]                s1.fenixzone.com - rol.fenixzone.com
+[13/08/2026 23:29:35] ---------------------------------------------------------
+[13/08/2026 23:29:35]  
+[13/08/2026 23:29:35] Number of vehicle models: 3
+[13/08/2026 23:29:37] 
+[Propiedades]: 0 propiedades fueron cargadas.
+
+[13/08/2026 23:29:37] Autos a cargar: 261
+[13/08/2026 23:29:37] [ERROR] ID: 1146 - Error: Table 'fz.zonas' doesn't exist - Callback - CargarZonas - Query: SELECT * FROM `zonas` WHERE `Z_Activa` = '1' LIMIT 100
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56944 id: 0
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56945 id: 1
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56947 id: 2
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56946 id: 3
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56949 id: 4
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56950 id: 5
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56948 id: 6
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56951 id: 7
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56952 id: 8
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56953 id: 9
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56954 id: 10
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56955 id: 11
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56956 id: 12
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56957 id: 13
+[13/08/2026 23:29:38] [connection] incoming connection: 127.0.0.1:56958 id: 14
+[13/08/2026 23:29:38] [npc:join] .Motorman1 has joined the server (0:127.0.0.1)
+[13/08/2026 23:29:38] [npc:join] .Motorman2 has joined the server (1:127.0.0.1)
+[13/08/2026 23:29:38] [npc:join] .Motorman4 has joined the server (2:127.0.0.1)
+[13/08/2026 23:29:38] [npc:join] .Motorman3 has joined the server (3:127.0.0.1)
+[13/08/2026 23:29:38] [npc:join] .Miguel has joined the server (4:127.0.0.1)
+[13/08/2026 23:29:38] [npc:join] .Marcelo has joined the server (5:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Sergio has joined the server (6:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Alejandro has joined the server (7:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Camello1 has joined the server (8:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .HippiePepe has joined the server (9:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Angelica has joined the server (10:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Jorge has joined the server (11:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Ignacio has joined the server (12:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Hugo has joined the server (13:127.0.0.1)
+[13/08/2026 23:29:39] [npc:join] .Mao has joined the server (14:127.0.0.1)
