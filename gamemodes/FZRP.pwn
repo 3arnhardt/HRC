@@ -78,6 +78,11 @@
 #define     RangoSonidoPlayer   55.0
 #define     MAX_CASAS_ROBO      15
 #define 	DIALOG_AD			12914
+#define DIALOG_INSCRIPCION 8500
+#define DIALOG_PARTICIPANTES 8501
+#define DIALOG_VEHICULO 8502
+#define DIALOG_OPCIONES_CARRERA 8503
+#define DIALOG_VUELTAS_CARRERA 8504
 //==================================   CONFIGURACIÓN  SERVIDOR 1  ==================================//
 #define HOST_DB "localhost"
 #define USER_DB "root"
@@ -445,7 +450,14 @@ new Text:FlechasArribaPuti, Text:FlechasArribaPuti2, Strip[12], Stripx[10], EnCl
 new ComandoEstado = 1,TiempoReinicio = -1,actors[20],RejasFC[33],Guardia3,Guardia4,Guardia6,Guardia7,Guardia8,Guardia12;
 new IslaSeguridad,IslaSeguridad2,Hombreemisora,Chicataxista, PuertasRobo[13];
 new Minero,Minero1,Avionista,Entrenador,Entrenador2,quienfue[MAX_PLAYER_NAME], vecesa[MAX_PLAYERS],BaldeAgua[MAX_PLAYERS],PrendaMarcada[MAX_PLAYERS], TextosIslas1,TextosIslas2,bool:EnPrueba[MAX_PLAYERS],bool:PruebaOnline[MAX_PLAYERS],Frecuencia[MAX_PLAYERS],LoroHabla[MAX_PLAYERS],FraseLoro[MAX_PLAYERS][70],EnCarreras[MAX_PLAYERS],lugarcarrera,EmpezoCarrera,ParticipantesCarrera,HabilitarCarreras,ParticipantesCarrera2, Text3D:TextoCarrera,ConteoCarrera;
-new VueltasCarrera[MAX_PLAYERS],bool:EntradaCarrera[MAX_PLAYERS],VehiculoCarrera[24], SlotGanador,InfoCP[4][12], asdtren[MAX_PLAYERS],asd[MAX_PLAYERS],frecuencias[9];
+new VueltasCarrera[MAX_PLAYERS],bool:EntradaCarrera[MAX_PLAYERS],VehiculoCarrera[24], SlotGanador,InfoCP[4][84], asdtren[MAX_PLAYERS],asd[MAX_PLAYERS],frecuencias[9];
+new CorredorEnSlot[21] = {INVALID_PLAYER_ID, ...}; // Array para guardar quién ocupa los slots del 1 al 20
+new VehiculoElegido[MAX_PLAYERS]; // Guardará el ID del modelo (502, 503 o 494)
+new VueltasConfiguradas = 5; // Predeterminado: 10 vueltas
+new ColisionesActivadas = 0;  // Predeterminado: 1 (Activadas)
+new PlayerText:TablaCarreraTD[MAX_PLAYERS];
+new CP_Actual[MAX_PLAYERS];
+new UltimoTickCP[MAX_PLAYERS];
 new TotemBuscar[MAX_PLAYERS][10],EnLlamada911[MAX_PLAYERS],LoginTimer[MAX_PLAYERS],IDReporte[MAX_PLAYERS],ListItemReportId[MAX_PLAYERS][40],CancelReport[MAX_PLAYERS];
 new ViendoPantalla[MAX_PLAYERS] = 0, ViendoGPS[MAX_PLAYERS],AutoBuscado[MAX_PLAYERS], JugadorBuscado[MAX_PLAYERS], PatenteBuscada[MAX_PLAYERS][10],PaydayDado,JustReported[MAX_PLAYERS],Balde[MAX_VEHICLES],DineroCamello, CrackCamello, MarihuanaCamello, MedicamentosCamello, Camello,TrenUno, TrenTres, TrenCuatro, TrenDos,BotonesFC[6],BotonesLVPD[3],PickupRopa[MAX_PLAYERS],ObjExp[19], ObjBox[34], ObjCon[5], ObjHumo1[3], ObjHumo2[3];
 new VerBaul[MAX_PLAYERS],Entrando[MAX_PLAYERS],Forzada4,Forzada5,Forzada6,Forzada8,Quitando[MAX_PLAYERS],Advertido[MAX_PLAYERS],GolpesAdv[MAX_PLAYERS],Objeto[MAX_PLAYERS],Forzada1,Forzada2,Forzada3,Avisos[MAX_PLAYERS],CasaAbierta,CasaAbierta6,CasaAbierta2,CasaAbierta3,CasaAbierta4,CasaAbierta5,reportar[MAX_PLAYERS],Float:PosTP[MAX_PLAYERS][3],AvisoTP[MAX_PLAYERS];
@@ -1636,7 +1648,7 @@ enum jInfo
 	v2Componentes12,	v2Componentes13,	v2Precio,	v2Traba,	Float:v2X,	Float:v2Y,	Float:v2Z,	Float:v2A,	v2Ovw,	vSeguro2,	v2Ointerior,	Float:pOX3,	Float:pOY3,	Float:pOZ3,	Float:pOA3,	V3E1,	V3E2,	V3E3,	V3E4,	v3Monedaa,	vModelo3,	v3Gas,	v3interior,	v3vw,	v3Color1,	v3Color2,	Float:pVidaV3,	v3Baul,	v3Baul2,	v3Baul3,	v3Baul4,	v3Baul5,	v3Baul6,	v3Baul7,	v3Baul8,	vPJ3,	v3patente[10],	v3Componentes0,	v3Componentes1,
 	v3Componentes2,	v3Componentes3,	v3Componentes4,	v3Componentes5,	v3Componentes6,	v3Componentes7,	v3Componentes8,	v3Componentes9,	v3Componentes10,	v3Componentes11,	v3Componentes12,	v3Componentes13,	v3Precio,	v3Traba,	Float:v3X,	Float:v3Y,	Float:v3Z,	Float:v3A,	v3Ovw,	vSeguro3,	v3Ointerior,	Float:pOX4,	Float:pOY4,	Float:pOZ4,	Float:pOA4,	V4E1,	V4E2,	V4E3,	V4E4,	v4Monedaa,	vModelo4,	v4Gas,	v4interior,	v4vw,	v4Color1,	v4Color2,
 	Float:pVidaV4,	v4Baul,	v4Baul2,	v4Baul3,	v4Baul4,	v4Baul5,	v4Baul6,	v4Baul7,	v4Baul8,	vPJ4,	v4patente[10],	v4Componentes0,	v4Componentes1,	v4Componentes2,	v4Componentes3,	v4Componentes4,	v4Componentes5,	v4Componentes6,	v4Componentes7,	v4Componentes8,	v4Componentes9,	v4Componentes10,	v4Componentes11,	v4Componentes12,	v4Componentes13,	v4Precio,	v4Traba,	Float:v4X,	Float:v4Y,	Float:v4Z,	Float:v4A,	v4Ovw,	vSeguro4,
-	pt_LAST_TERRITORY,pt_LAST_SHOT_TIME,v4Ointerior,	jRegalo,	jMuteado, CodigoEmail[10],	EstadoCorreo,	PuedeCambiar,	pEmail[52],	vAlarma,	v2Alarma,	v3Alarma,	v4Alarma,	vAAlarma,	vAAlarma2,	vAAlarma3,	vAAlarma4, BaneosD, BaneosD2, v2Baul9,v2Baul10,v3Baul9,v3Baul10,v4Baul9,v4Baul10,pMapper, pSan,pBloqueado, pRazonSan[50], @TempBan, acSetPosTick, pStats,sancionado,Float:pfRotZ4,	Float:pfScaleX4,	Float:pfScaleY4,	Float:pfScaleZ4,	pSlot4,	pSobreRuedas,
+	pt_LAST_TERRITORY,pt_LAST_SHOT_TIME,v4Ointerior,	jRegalo,	jMuteado, CodigoEmail[10],	EstadoCorreo,	PuedeCambiar,	pEmail[52],	vAlarma,	v2Alarma,	v3Alarma,	v4Alarma,	vAAlarma,	vAAlarma2,	vAAlarma3,	vAAlarma4, BaneosD, BaneosD2, v2Baul9,v2Baul10,v3Baul9,v3Baul10,v4Baul9,v4Baul10,pMapper, pSan,pBloqueado, pRazonSan[50], @TempBan, acSetPosTick, pStats,sancionado,Float:pfRotZ4,	Float:pfScaleX4,	Float:pfScaleY4,	Float:pfScaleZ4,	pSlot4,	pSobreRuedas, pVehColor1, pVehColor2
 };
 new PlayerInfo[MAX_PLAYERS][jInfo];
 
@@ -4179,6 +4191,16 @@ stock CrearBarras(playerid)
 	PlayerTextDrawBoxColor(playerid, PlayerTextdraws[playerid][ptextdraw_HUD][2], 0x1784C9FF);
 	PlayerTextDrawLetterSize(playerid, PlayerTextdraws[playerid][ptextdraw_HUD][2], 1.000000, 0.130000);
 	PlayerTextDrawTextSize(playerid, PlayerTextdraws[playerid][ptextdraw_HUD][2], 547.000000, 0.000000);
+	
+	TablaCarreraTD[playerid] = CreatePlayerTextDraw(playerid, 620.000000, 150.000000, "Cargando...");
+	PlayerTextDrawLetterSize(playerid, TablaCarreraTD[playerid], 0.220000, 1.100000);
+	PlayerTextDrawAlignment(playerid, TablaCarreraTD[playerid], 3); // Alineado a la derecha
+	PlayerTextDrawColor(playerid, TablaCarreraTD[playerid], -1);
+	PlayerTextDrawSetShadow(playerid, TablaCarreraTD[playerid], 1);
+	PlayerTextDrawSetOutline(playerid, TablaCarreraTD[playerid], 0);
+	PlayerTextDrawBackgroundColor(playerid, TablaCarreraTD[playerid], 0x00000055);
+	PlayerTextDrawFont(playerid, TablaCarreraTD[playerid], 1);
+	PlayerTextDrawSetProportional(playerid, TablaCarreraTD[playerid], 1);
 
 	IndicacionesT[playerid] = CreatePlayerTextDraw(playerid, 322.000000, 401.000000, "Aguarda mientras el ~b~mec˜nico~w~ termina su trabajo.");
 	PlayerTextDrawLetterSize(playerid, IndicacionesT[playerid], 0.319999, 1.300000);
@@ -23224,27 +23246,30 @@ public OnPlayerDataLoaded(playerid)
 }
 public CheckNickName(playerid,result)
 {
-	if(cache_num_rows() == 0)
-	{
+	#if DEBUG_GM == 1
+	printf("OnPlayerDataLoad %s[%d] - Load 4",PlayerInfo[playerid][Nickname],playerid);
+	#endif
 
-		ShowPlayerDialog(playerid, INMIGRACION, DIALOG_STYLE_MSGBOX, "Nombre inválido", "{DBED16}Departamento de inmigración:{FFFFFF} Tu nombre no es aceptable.\n{DBED16}Formato para el nombre:{FFFFFF} Nombre_Apellido\nPor favor, vuelve con un nombre válido.","Aceptar","");
-		ExpulsarJugador(playerid,"Nombre inválido.");
-		#if DEBUG_GM == 1
-		printf("OnPlayerDataLoad %s[%d] - Load 3",PlayerInfo[playerid][Nickname],playerid);
-		#endif
+	new content = 0;
+
+	// Extraemos el owner de la base de datos SOLO si encontró la cuenta
+	if(cache_num_rows() > 0)
+	{
+	    cache_get_value_name_int(0, "owner", content);
+	}
+
+	PlayerTemp[playerid][pOwner] = content;
+
+	// Lo mandamos derecho al Login o al Registro según el resultado, ignorando el formato del nombre
+	if(result == 1)
+	{
+	    return ShowPlayerDialog(playerid, LOGIN, DIALOG_STYLE_PASSWORD, "Esta cuenta está registrada", "Ingresa tu contraseña:", "Enviar", "Salir");
 	}
 	else
 	{
-
-		#if DEBUG_GM == 1
-		printf("OnPlayerDataLoad %s[%d] - Load 4",PlayerInfo[playerid][Nickname],playerid);
-		#endif
-		new content = 0;
-		cache_get_value_name_int(0, "owner", content);
-		PlayerTemp[playerid][pOwner] = content;
-		if(result == 1) return ShowPlayerDialog(playerid, LOGIN, DIALOG_STYLE_PASSWORD,"Esta cuenta está registrada","Ingresa tu contraseña:","Enviar","Salir");
-		else ShowPlayerDialog(playerid, REGISTRO, DIALOG_STYLE_INPUT,"Registra una nueva cuenta","Ingresa tu contraseña:","Enviar","Salir");
+	    ShowPlayerDialog(playerid, REGISTRO, DIALOG_STYLE_INPUT, "Registra una nueva cuenta", "Ingresa tu contraseña:", "Enviar", "Salir");
 	}
+
 	return 1;
 }
 
@@ -23654,6 +23679,9 @@ public OnPlayerSpawnLoaded(playerid)
 		cache_get_value_name(0, "EntradaX", content);		PlayerInfo[playerid][jPosE_x] = floatstr(content);
 		cache_get_value_name(0, "EntradaY", content);		PlayerInfo[playerid][jPosE_y] = floatstr(content);
 		cache_get_value_name(0, "EntradaZ" , content);      PlayerInfo[playerid][jPosE_z] = floatstr(content);
+		cache_get_value_name_int(0, "pStats", PlayerInfo[playerid][pStats]);
+		cache_get_value_name_int(0, "vColor1", PlayerInfo[playerid][pVehColor1]);
+		cache_get_value_name_int(0, "vColor2", PlayerInfo[playerid][pVehColor2]);
 		LoadVehicles(playerid);
 
 		LogeoCorrecto[playerid] = 1;
@@ -25093,7 +25121,103 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	new string[1500];
 	new Query[256];
 	switch(dialogid)
-	{
+	{// ---> AQUÍ COLOCAS EL CÓDIGO DEL PASO 3 COMO UN "CASE" <---
+	    case DIALOG_INSCRIPCION:
+	    {
+	        if(response) // Si clickeó "Seleccionar"
+	        {
+	            new slot_elegido = listitem + 1; // listitem 0 equivale al Puesto #1
+
+	            // Validaciones por si la carrera cerró mientras miraba el menú
+	            if(HabilitarCarreras == 0 || EmpezoCarrera == 1) return SendClientMessage(playerid, -1, "La inscripción ya no está disponible.");
+	            if(EnCarreras[playerid] != 0) return SendClientMessage(playerid,-1,"Ya te inscribiste.");
+	            if(PlayerInfo[playerid][jDinero] < 2000) return SendClientMessage(playerid,-1,"Necesitas {00CC00}$2.000{FFFFFF} para poder inscribirte.");
+
+	            // Verificamos si alguien le "ganó de mano" y ocupó el slot mientras él veía el menú
+	            if(CorredorEnSlot[slot_elegido] != INVALID_PLAYER_ID)
+	            {
+	                SendClientMessage(playerid, -1, "Ese puesto ya está ocupado. Elige otro.");
+	                callcmd::inscribirse(playerid, ""); // Volvemos a abrirle el menú automáticamente
+	                return 1;
+	            }
+
+	            // Inscripción exitosa
+	            QuitarDinero(playerid, 2000);
+	            CorredorEnSlot[slot_elegido] = playerid; // Reservamos el slot para él
+	            EnCarreras[playerid] = slot_elegido;     // Le asignamos su slot específico
+	            VehiculoElegido[playerid] = 502; // Vehículo por defecto
+	            ParticipantesCarrera ++;
+	            ParticipantesCarrera2 ++;
+
+	            SendClientMessage(playerid,-1,"Te inscribiste para participar en la carrera, por favor espera unos minutos.");
+	            SendClientMessage(playerid,-1,"Perderás el puesto si sales del estadio.");
+
+	            // ---> ABRIR MENÚ DE HOTRING AUTOMÁTICAMENTE <---
+	            callcmd::hotring(playerid, "");
+	        }
+	        return 1;
+	    }
+        // ---> FIN DEL CÓDIGO DEL PASO 3 <---
+        case DIALOG_VEHICULO:
+	    {
+	        if(response)
+	        {
+	            switch(listitem)
+	            {
+	                case 0: VehiculoElegido[playerid] = 502; // Hotring A
+	                case 1: VehiculoElegido[playerid] = 503; // Hotring B
+	                case 2: VehiculoElegido[playerid] = 494; // Hotring Normal
+	            }
+	            SendClientMessage(playerid, -1, "{00CC00}Vehículo actualizado.{FFFFFF} Has cambiado tu auto para la carrera exitosamente.");
+	        }
+	        return 1;
+	    }
+	    case DIALOG_OPCIONES_CARRERA:
+	    {
+	        if(response)
+	        {
+	            if(listitem == 0) // Seleccionó "Vueltas"
+	            {
+	                ShowPlayerDialog(playerid, DIALOG_VUELTAS_CARRERA, DIALOG_STYLE_INPUT, "Vueltas de la Carrera", "Ingresa la cantidad de vueltas (Máximo 80):", "Aceptar", "Atrás");
+	            }
+	            else if(listitem == 1) // Seleccionó "Colisiones"
+	            {
+	                if(ColisionesActivadas == 1)
+	                {
+	                    ColisionesActivadas = 0;
+	                    SendClientMessage(playerid, -1, "{FF0000}Colisiones desactivadas.{FFFFFF} Los autos serán fantasmas en la próxima carrera.");
+	                }
+	                else
+	                {
+	                    ColisionesActivadas = 1;
+	                    SendClientMessage(playerid, -1, "{00CC00}Colisiones activadas.{FFFFFF} Los autos chocarán entre sí.");
+	                }
+	                callcmd::opcionescarrera(playerid, ""); // Volvemos a mostrar el menú para ver el cambio
+	            }
+	        }
+	        return 1;
+	    }
+	    case DIALOG_VUELTAS_CARRERA:
+	    {
+	        if(response)
+	        {
+	            new vueltas = strval(inputtext);
+
+	            // Validamos que no rompa el array ni sea 0
+	            if(vueltas < 1 || vueltas > 80 || isnull(inputtext))
+				{
+					return ShowPlayerDialog(playerid, DIALOG_VUELTAS_CARRERA, DIALOG_STYLE_INPUT, "Vueltas de la Carrera", "{FF0000}Error: Mínimo 1, Máximo 80.{FFFFFF}\nIngresa la cantidad de vueltas:", "Aceptar", "Atrás");
+				}
+
+	            VueltasConfiguradas = vueltas;
+	            new str[128];
+	            format(str, sizeof(str), "Las vueltas de la carrera se han ajustado a {00CC00}%d{FFFFFF}.", VueltasConfiguradas);
+	            SendClientMessage(playerid, -1, str);
+	            callcmd::opcionescarrera(playerid, "");
+	        }
+	        else callcmd::opcionescarrera(playerid, ""); // Si presiona "Atrás"
+	        return 1;
+	    }
 	    case D_REGALOS:
 	    {
 	        if(response)
@@ -31605,8 +31729,25 @@ public OnGameModeInit()
 	// Sala 4
 	PuertasDeBotones[4] = CreateDynamicObject(1500, 361.209991, 152.330002, 1039.109985, 0.000000, 0.000000, 0.330000);
 
-	CreateDynamic3DTextLabel("{FFFFFF}Puede {DBED16}/inscribirse{FFFFFF} para participar en la carrera.\nCosto:{00CC00} $2.000",COLOR_WHITE,-1447.7421,-313.3544,1052.0969,5.0,INVALID_PLAYER_ID,INVALID_VEHICLE_ID,1,-1,-1,-1,25.0);
+	CreateDynamic3DTextLabel("{FFFFFF}Puede {DBED16}/inscribirse{FFFFFF} para participar en la carrera.\n{FFFFFF}Usa {DBED16}/hotring{FFFFFF} para elegir tu vehículo.\n{FFFFFF}Usa {DBED16}/participantes{FFFFFF} para ver la lista de corredores.\nCosto:{00CC00} $2.000",COLOR_WHITE,-1447.7421,-313.3544,1052.0969,5.0,INVALID_PLAYER_ID,INVALID_VEHICLE_ID,1,-1,-1,-1,25.0);
 	TextoCarrera = Create3DTextLabel("{EB0000}Boletería cerrada\n{DBED16}Horarios de los eventos:{FFFFFF} 5hs, 11hs, 17hs y 23hs",COLOR_WHITE,1101.2697,1613.1414,12.5469+0.5,5.0,0,1);
+ // Texto de campeones, Estadio LV
+	new cartel_campeones = CreateDynamicObject(19466, -1429.1830, -316.9300, 1060.9000, 0.0000, 0.0000, 270.0000);
+	new texto_campeones[512];
+	format(texto_campeones, sizeof(texto_campeones), "{00FF00}CAMPEONES{FFFFFF}\n1. {FFFF00}ignazio.{FFFFFF} (3)\n2. {FFFF00}0M4R{FFFFFF} (1)\n2. {FFFF00}earnhardt{FFFFFF} (1)\n2. {FFFF00}Mathew{FFFFFF} (1)\n5.                (0)");
+	SetDynamicObjectMaterialText(cartel_campeones, 0, texto_campeones, OBJECT_MATERIAL_SIZE_256x256, "Arial", 40, 1, 0xFFFFFFFF, 0x00000000, OBJECT_MATERIAL_TEXT_ALIGN_LEFT);
+
+	// Texto de eventos, Estadio LV
+	new cartel_eventos = CreateDynamicObject(19466, -1435.1830, -316.9300, 1060.9000, 0.0000, 0.0000, 270.0000);
+	new texto_eventos[512];
+	format(texto_eventos, sizeof(texto_eventos), "{00FF00}EVENTOS{FFFFFF}\n1. {FFFF00}{FFFFFF} (0)\n2. {FFFF00}{FFFFFF} (0)\n3. {FFFF00}{FFFFFF} (0)\n4. {FFFF00}{FFFFFF} (0)\n5. {FFFF00}{FFFFFF} (0)");
+	SetDynamicObjectMaterialText(cartel_eventos, 0, texto_eventos, OBJECT_MATERIAL_SIZE_256x256, "Arial", 40, 1, 0xFFFFFFFF, 0x00000000, OBJECT_MATERIAL_TEXT_ALIGN_LEFT);
+
+	// Texto de Podios, Estadio LV
+	new cartel_podios = CreateDynamicObject(19466, -1432.1830, -316.9300, 1060.9000, 0.0000, 0.0000, 270.0000);
+	new texto_podios[512];
+	format(texto_podios, sizeof(texto_podios), "{00FF00}PODIOS{FFFFFF}\n1. {FFFF00}0M4R{FFFFFF} (4)\n2. {FFFF00}earnhardt{FFFFFF} (4)\n3. {FFFF00}ignazio.{FFFFFF} (3)\n4. {FFFF00}Julian{FFFFFF} (2)\n5. {FFFF00}sneezy{FFFFFF} (1)");
+	SetDynamicObjectMaterialText(cartel_podios, 0, texto_podios, OBJECT_MATERIAL_SIZE_256x256, "Arial", 40, 1, 0xFFFFFFFF, 0x00000000, OBJECT_MATERIAL_TEXT_ALIGN_LEFT);
 	// Tiempos
 	SetTimer("CargarFabricas",7000,false);
 	SetTimer("TimerAreas",1000,true);
@@ -33756,7 +33897,7 @@ public cargartodo()
 	TextDrawFont(PantallaGTA[1], 2);
 	TextDrawSetProportional(PantallaGTA[1], 1);
 
-	CN3 = TextDrawCreate(120.000000, 50.000000, "FENIXZONE ROLEPLAY");
+	CN3 = TextDrawCreate(120.000000, 50.000000, "HOTRING RACER CREW");
 	TextDrawLetterSize(CN3, 1.200000, 2.100000);
 	TextDrawTextSize(CN3, 1280.000000, 1280.000000);
 	TextDrawAlignment(CN3, 0);
@@ -33770,7 +33911,7 @@ public cargartodo()
 	TextDrawSetProportional(CN3, 1);
 	TextDrawSetSelectable(CN3, 0);
 
-	CN4 = TextDrawCreate(190.000000, 350.000000, "WEB: HTTP://ROL.FENIXZONE.COM");
+	CN4 = TextDrawCreate(190.000000, 350.000000, "WEB: HTTP://ROL.HOTRINGCREW.COM");
 	TextDrawLetterSize(CN4, 0.480000, 1.120000);
 	TextDrawTextSize(CN4, 1280.000000, 1280.000000);
 	TextDrawAlignment(CN4, 0);
@@ -37066,16 +37207,38 @@ public BajarTiempos()
 	else if(hora == 23 && minuto == 0 && HabilitarCarreras == 0) habilitar = true;
 	if(habilitar == true)
 	{
-		
 		ResetearCarrera();
 		HabilitarCarreras = 1;
 		Update3DTextLabelText(TextoCarrera,COLOR_WHITE,"{00CC00}Estadio abierto\n{FFFFFF}Costo de la entrada: {00CC00}$600\n{DBED15}/comprar entrada");
 		ConteoCarrera = 610;
 		SetTimer("EmpezarCarrera",60*1000,0);
-		new string[250];
-		//format(string,sizeof(string),"En {00CC00}%d minutos{FFFFFF} comienza la carrera, ya se inscribieron {DBED15}%d{FFFFFF} jugadores",ConteoCarrera/60,ParticipantesCarrera);
-		format(string,sizeof(string),"En {00CC00}%d minutos{FFFFFF} comienza la carrera%s.",ConteoCarrera/60, getTextoCorredores(ParticipantesCarrera));
-		for(new i = 0; i <= GetPlayerPoolSize(); i++) if(PlayerToPoint(i,250,-1408.8688,-304.5082,1056.4351) && GetPlayerInterior(i) == 7) SendClientMessage(i,-1,string);
+
+		new string1[144], string2[144], colisiones_texto[64];
+
+		// Verificamos si están activadas o no para armar el texto final
+		if(ColisionesActivadas == 1)
+		{
+		    colisiones_texto = "{00CC00}Activadas{FFFFFF}";
+		}
+		else
+		{
+		    colisiones_texto = "{FF0000}Desactivadas{FFFFFF}";
+		}
+
+		// Primer renglón: Tiempo y corredores
+		format(string1, sizeof(string1), "En {00CC00}%d minutos{FFFFFF} comienza la carrera%s.", ConteoCarrera/60, getTextoCorredores(ParticipantesCarrera));
+
+		// Segundo renglón: Datos técnicos del evento
+		format(string2, sizeof(string2), "   {DBED15}»{FFFFFF} {00CCFF}Vueltas:{00CC00} %d {FFFFFF}| {00CCFF}Colisiones: %s", VueltasConfiguradas, colisiones_texto);
+
+		for(new i = 0; i <= GetPlayerPoolSize(); i++)
+		{
+		    if(PlayerToPoint(i,250,-1408.8688,-304.5082,1056.4351) && GetPlayerInterior(i) == 7)
+		    {
+		        SendClientMessage(i, -1, string1);
+		        SendClientMessage(i, -1, string2); // Segundo renglón
+		    }
+		}
 	}
 }
 
@@ -42521,14 +42684,19 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		if(EnCarreras[playerid] > 0)
 		{
 
-			if(IsPlayerInRangeOfPoint(playerid,10,-1418.1959,-276.4316,1051.0911))
+			if(IsPlayerInRangeOfPoint(playerid,10,-1431.1999,-281.7999,1050.3000))
 			{
 
 				VueltasCarrera[playerid] ++;
+				CP_Actual[playerid] = 0;
+				UltimoTickCP[playerid] = GetTickCount();
+				ActualizarTablaCarrera();
 				new string2[50];
-				format(string2,sizeof(string2),"Vuelta: %d/10",VueltasCarrera[playerid]);
+				// 1. HUD Dinámico: Reemplazamos el "10" estático por la variable
+				format(string2,sizeof(string2),"Vuelta: %d/%d", VueltasCarrera[playerid], VueltasConfiguradas);
 				PlayerTextDrawSetString(playerid,CarreraT[playerid][0],string2);
-				if(VueltasCarrera[playerid] >= 10)
+				// 2. Lógica Dinámica: La carrera termina según la cantidad configurada
+				if(VueltasCarrera[playerid] >= VueltasConfiguradas)
 				{
 
 					NoTeleportHack(playerid);
@@ -42543,6 +42711,8 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 					PlayerTextDrawHide(playerid, CarreraT[playerid][0]);
 					PlayerTextDrawHide(playerid, CarreraT[playerid][1]);
 					PlayerTextDrawHide(playerid, CarreraT[playerid][2]);
+					PlayerTextDrawHide(playerid, TablaCarreraTD[playerid]);
+					ActualizarTablaCarrera();
 					SlotGanador ++;
 					new string[250];
 					// 1. Calculamos los segundos reales transcurridos
@@ -42633,7 +42803,8 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 					}
 					else if(SlotGanador > 3) {
 						// --- CORRECCIÓN AQUÍ ---
-						format(string,sizeof(string),"El corredor {00CCFF}%s{FFFFFF} consiguió terminar en la posición %d tardando {00CC00}%d:%02d.%03d{FFFFFF}.",PlayerInfo[playerid][Nickname], minutos, segundos, milisegundos);
+						// Agregamos 'SlotGanador' antes de 'minutos'
+						format(string,sizeof(string),"El corredor {00CCFF}%s{FFFFFF} consiguió terminar en la posición %d tardando {00CC00}%d:%02d.%03d{FFFFFF}.",PlayerInfo[playerid][Nickname], SlotGanador, minutos, segundos, milisegundos);
 						MensajeEx(playerid,-1,"Lograste terminar la carrera en la posición %d.",SlotGanador);
 					}
 					for(new i, j = GetPlayerPoolSize(); i <= j; i++) if(IsPlayerInRangeOfPoint(i,250,-1408.8688,-304.5082,1056.4351) && GetPlayerInterior(i) == 7) SendClientMessage(i,-1,string);
@@ -42662,31 +42833,40 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 				PlayerPlaySound(playerid,1056,0.0,0.0,0.0);
 				InfoCP[1][VueltasCarrera[playerid]] ++;
-				SetPlayerRaceCheckpoint(playerid,0,-1365.4042,-280.5632,1045.2321,-1504.3351,-154.6163,1049.3365,10);
+				SetPlayerRaceCheckpoint(playerid,0,-1365.4042,-280.5632,1045.2321,-1504.3351,-154.6163,1049.3365,12);
 				new string[100];
 				format(string,sizeof(string),"%d/%d",InfoCP[1][VueltasCarrera[playerid]],ParticipantesCarrera2);
 				PlayerTextDrawSetString(playerid,CarreraT[playerid][1],string);
+				CP_Actual[playerid] = 1;
+				UltimoTickCP[playerid] = GetTickCount();
+				ActualizarTablaCarrera();
 			}
-			if(IsPlayerInRangeOfPoint(playerid,10,-1365.4042,-280.5632,1045.2321))
+			if(IsPlayerInRangeOfPoint(playerid,12,-1365.4042,-280.5632,1045.2321))
 			{
 
 				PlayerPlaySound(playerid,1056,0.0,0.0,0.0);
-				SetPlayerRaceCheckpoint(playerid,0,-1504.3351,-154.6163,1049.3365,-1418.1959,-276.4316,1051.0911,10);
+				SetPlayerRaceCheckpoint(playerid,0,-1504.3351,-154.6163,1049.3365,-1431.1999,-281.7999,1050.3000,12);
 				InfoCP[2][VueltasCarrera[playerid]] ++;
 				new string[100];
 				format(string,sizeof(string),"%d/%d",InfoCP[2][VueltasCarrera[playerid]],ParticipantesCarrera2);
 				PlayerTextDrawSetString(playerid,CarreraT[playerid][1],string);
+				CP_Actual[playerid] = 2;
+				UltimoTickCP[playerid] = GetTickCount();
+				ActualizarTablaCarrera();
 			}
-			if(IsPlayerInRangeOfPoint(playerid,10,-1504.3351,-154.6163,1049.3365))
+			if(IsPlayerInRangeOfPoint(playerid,12,-1504.3351,-154.6163,1049.3365))
 			{
 
 				PlayerPlaySound(playerid,1056,0.0,0.0,0.0);
-				if(VueltasCarrera[playerid] == 9) SetPlayerRaceCheckpoint(playerid,1,-1418.1959,-276.4316,1051.0911,-1357.2258,-130.9288,1051.0356,10);
-				else SetPlayerRaceCheckpoint(playerid,0,-1418.1959,-276.4316,1051.0911,-1357.2258,-130.9288,1051.0356,10);
+				if(VueltasCarrera[playerid] == (VueltasConfiguradas - 1)) SetPlayerRaceCheckpoint(playerid,1,-1431.1999,-281.7999,1050.3000,-1357.2258,-130.9288,1051.0356,10);
+				else SetPlayerRaceCheckpoint(playerid,0,-1431.1999,-281.7999,1050.3000,-1357.2258,-130.9288,1051.0356,10);
 				InfoCP[3][VueltasCarrera[playerid]] ++;
 				new string[100];
 				format(string,sizeof(string),"%d/%d",InfoCP[3][VueltasCarrera[playerid]],ParticipantesCarrera2);
 				PlayerTextDrawSetString(playerid,CarreraT[playerid][1],string);
+				CP_Actual[playerid] = 3;
+				UltimoTickCP[playerid] = GetTickCount();
+				ActualizarTablaCarrera();
 			}
 		}
 		if(Cosechas[playerid][RutaCosecha] != 0)
@@ -43785,7 +43965,7 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 	{
 		if(IsPlayerConnected(playerid))
 		{
-			
+
 			SetPlayerColor(playerid,DEFAULT_COLOR);
 		}
 	}
@@ -44975,8 +45155,9 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 
 
 				SetTimerEx("IsArrested",2000,false,"d",playerid);
-				if(PlayerInfo[playerid][Modder] < MODDER_GAME) SetTimerEx("AntiChecker",segundos(5),0,"d",playerid);
-				else TimerName[playerid] = SetTimerEx("AntiChecker",segundos(200),0,"d",playerid);
+
+				// Ahora todos recuperan su nombre original a los 5 segundos
+				TimerName[playerid] = SetTimerEx("AntiChecker",segundos(5),0,"d",playerid);
 
 				if(strcmp(PlayerInfo[playerid][pPaisRegistro], "Desconocido", true) == 0) ActualizarPais(playerid);
 				if(strcmp(PlayerInfo[playerid][pPaisRegistro], "desconocido", true) == 0) ActualizarPais(playerid);
@@ -46671,29 +46852,62 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 
 	public EmpezarCarrera()
 	{
-		new string[300];
+		new string1[144], string2[144], colisiones_texto[64];
+
+		// Verificamos si están activadas o no para armar el texto final (acorté un poco el texto para no gastar espacio innecesario)
+		if(ColisionesActivadas == 1)
+		{
+	    	colisiones_texto = "{00CC00}Activadas{FFFFFF}";
+		}
+		else
+		{
+	    	colisiones_texto = "{FF0000}Desactivadas{FFFFFF}";
+		}
+
 		if(ConteoCarrera > 60)
 		{
-			
-			//format(string,sizeof(string),"En {00CC00}%d minutos{FFFFFF} comienza la carrera, ya se inscribieron {DBED15}%d{FFFFFF} corredores.",ConteoCarrera/60,ParticipantesCarrera);
-			format(string,sizeof(string),"En {00CC00}%d minutos{FFFFFF} comienza la carrera%s.",ConteoCarrera/60, getTextoCorredores(ParticipantesCarrera));
-			for(new i = 0; i <= GetPlayerPoolSize(); i++) if(IsPlayerInRangeOfPoint(i,250,-1408.8688,-304.5082,1056.4351) && GetPlayerInterior(i) == 7) SendClientMessage(i,-1,string);
+			// Primer renglón: Tiempo y corredores
+			format(string1, sizeof(string1), "En {00CC00}%d minutos{FFFFFF} comienza la carrera%s.", ConteoCarrera/60, getTextoCorredores(ParticipantesCarrera));
+
+			// Segundo renglón: Datos técnicos del evento
+			format(string2, sizeof(string2), "   {DBED15}»{FFFFFF} {00CCFF}Vueltas:{00CC00} %d {FFFFFF}| {00CCFF}Colisiones: %s", VueltasConfiguradas, colisiones_texto);
+
+			for(new i = 0; i <= GetPlayerPoolSize(); i++)
+			{
+		    	if(IsPlayerInRangeOfPoint(i,250,-1408.8688,-304.5082,1056.4351) && GetPlayerInterior(i) == 7)
+		    	{
+		        	SendClientMessage(i,-1,string1);
+		        	SendClientMessage(i,-1,string2); // Enviamos el segundo renglón justo abajo
+		    	}
+			}
+
 			SetTimer("EmpezarCarrera",segundos(60),0);
 			ConteoCarrera -= 60;
 		}
 		else if(ConteoCarrera <= 60 && ConteoCarrera != 0)
 		{
-			
-			//format(string,sizeof(string),"En {00CC00}%d segundos{FFFFFF} comienza la carrera, ya se inscribieron {DBED15}%d{FFFFFF} corredores.",ConteoCarrera,ParticipantesCarrera);
-			format(string,sizeof(string),"En {00CC00}%d segundos{FFFFFF} comienza la carrera%s.",ConteoCarrera, getTextoCorredores(ParticipantesCarrera));
-			for(new i = 0; i <= GetPlayerPoolSize(); i++) if(IsPlayerInRangeOfPoint(i,250,-1408.8688,-304.5082,1056.4351) && GetPlayerInterior(i) == 7) SendClientMessage(i,-1,string);
+			// Primer renglón: Tiempo y corredores (en segundos)
+			format(string1, sizeof(string1), "En {00CC00}%d segundos{FFFFFF} comienza la carrera%s.", ConteoCarrera, getTextoCorredores(ParticipantesCarrera));
+
+			// Segundo renglón: Datos técnicos del evento
+			format(string2, sizeof(string2), "   {DBED15}»{FFFFFF} {00CCFF}Vueltas:{00CC00} %d {FFFFFF}| {00CCFF}Colisiones: %s", VueltasConfiguradas, colisiones_texto);
+
+			for(new i = 0; i <= GetPlayerPoolSize(); i++)
+			{
+		    	if(IsPlayerInRangeOfPoint(i,250,-1408.8688,-304.5082,1056.4351) && GetPlayerInterior(i) == 7)
+		    	{
+		        	SendClientMessage(i,-1,string1);
+		        	SendClientMessage(i,-1,string2); // Enviamos el segundo renglón justo abajo
+		    	}
+			}
+
 			SetTimer("EmpezarCarrera",segundos(10),0);
 			ConteoCarrera -= 10;
 		}
 		else
 		{
 			
-			ConteoCarrera = 10;
+			ConteoCarrera = 5;
 			if(ParticipantesCarrera < 1)
 			{
 				
@@ -46720,26 +46934,31 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 					SetPlayerVirtualWorld(i,7);
 					SetVehicleInterior(i,7);
 					new veh;
-					if(EnCarreras[i] == 1)  		veh = CreateVehicle(502,-1464.8, -276.89999, 1050.4,257.9200 ,-1,-1,-1); // PRIMER SPAWN HOTRING A
-					else if(EnCarreras[i] == 2)		veh = CreateVehicle(502,-1466.5, -282.89999, 1050.5,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 3)		veh = CreateVehicle(502,-1436.8180, -279.4531, 1051.0262,278.0089 ,-1,-1,-1);
-					else if(EnCarreras[i] == 4)		veh = CreateVehicle(502,-1435.7325, -286.6672, 1051.0447,278.0428 ,-1,-1,-1);
-					else if(EnCarreras[i] == 5)		veh = CreateVehicle(502,-1443.9871, -279.9528, 1051.1610,268.7120 ,-1,-1,-1);
-					else if(EnCarreras[i] == 6)		veh = CreateVehicle(502,-1443.2439, -287.2351, 1051.0262,269.6268 ,-1,-1,-1);
-					else if(EnCarreras[i] == 7)		veh = CreateVehicle(502,-1450.7983, -279.3050, 1051.0447,261.7959 ,-1,-1,-1);
-					else if(EnCarreras[i] == 8)		veh = CreateVehicle(502,-1451.0276, -286.7166, 1051.1610,264.2670 ,-1,-1,-1);
-					else if(EnCarreras[i] == 9)		veh = CreateVehicle(502,-1457.6642, -278.1770, 1051.0447,259.2639 ,-1,-1,-1);
-					else if(EnCarreras[i] == 10)	veh = CreateVehicle(502,-1458.2916, -285.2527, 1051.1610,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 11)	veh = CreateVehicle(502,-1464.8, -276.89999, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 12)	veh = CreateVehicle(502,-1466.5, -282.89999, 1050.5,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 13)	veh = CreateVehicle(502,-1473.5, -274.5, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 14)	veh = CreateVehicle(502,-1475.2, -280.29999, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 15)	veh = CreateVehicle(502,-1482.2, -271.39999, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 16)	veh = CreateVehicle(502,-1484.4, -276.70001, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 17)	veh = CreateVehicle(502,-1490, -267.70001, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 18)	veh = CreateVehicle(502,-1492.6, -272.29999, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 19)	veh = CreateVehicle(502,-1497.4, -263.5, 1050.4,257.9200 ,-1,-1,-1);
-					else if(EnCarreras[i] == 20)	veh = CreateVehicle(502,-1500.2, -267.79999, 1050.4,257.9200 ,-1,-1,-1);
+					// Obtenemos el modelo que eligió el jugador. Si por alguna razón es 0, forzamos el 502.
+					new modelo = VehiculoElegido[i];
+					if(modelo == 0) modelo = 502;
+					new c1 = PlayerInfo[i][pVehColor1];
+					new c2 = PlayerInfo[i][pVehColor2];
+					if(EnCarreras[i] == 1)  		veh = CreateVehicle(modelo,-1429.7744, -277.8124, 1051.0447,286.1007 ,c1,c2,-1); // PRIMER SPAWN HOTRING A
+					else if(EnCarreras[i] == 2)		veh = CreateVehicle(modelo,-1428.6266, -284.8796, 1051.1610,286.0206 ,c1,c2,-1);
+					else if(EnCarreras[i] == 3)		veh = CreateVehicle(modelo,-1436.8180, -279.4531, 1051.0262,278.0089 ,c1,c2,-1);
+					else if(EnCarreras[i] == 4)		veh = CreateVehicle(modelo,-1435.7325, -286.6672, 1051.0447,278.0428 ,c1,c2,-1);
+					else if(EnCarreras[i] == 5)		veh = CreateVehicle(modelo,-1443.9871, -279.9528, 1051.1610,268.7120 ,c1,c2,-1);
+					else if(EnCarreras[i] == 6)		veh = CreateVehicle(modelo,-1443.2439, -287.2351, 1051.0262,269.6268 ,c1,c2,-1);
+					else if(EnCarreras[i] == 7)		veh = CreateVehicle(modelo,-1450.7983, -279.3050, 1051.0447,261.7959 ,c1,c2,-1);
+					else if(EnCarreras[i] == 8)		veh = CreateVehicle(modelo,-1451.0276, -286.7166, 1051.1610,264.2670 ,c1,c2,-1);
+					else if(EnCarreras[i] == 9)		veh = CreateVehicle(modelo,-1457.6642, -278.1770, 1051.0447,259.2639 ,c1,c2,-1);
+					else if(EnCarreras[i] == 10)	veh = CreateVehicle(modelo,-1458.2916, -285.2527, 1051.1610,257.9200 ,c1,c2,-1);
+					else if(EnCarreras[i] == 11)	veh = CreateVehicle(modelo,-1464.8, -276.89999, 1050.4,257.9200 ,c1,c2,-1);
+					else if(EnCarreras[i] == 12)	veh = CreateVehicle(modelo,-1466.5, -282.89999, 1050.5,257.9200 ,c1,c2,-1);
+					else if(EnCarreras[i] == 13)	veh = CreateVehicle(modelo,-1473.4930, -274.3390, 1050.1642,252.3298 ,c1,c2,-1);
+					else if(EnCarreras[i] == 14)	veh = CreateVehicle(modelo,-1475.2, -280.29999, 1050.4,257.9200 ,c1,c2,-1);
+					else if(EnCarreras[i] == 15)	veh = CreateVehicle(modelo,-1482.2, -271.39999, 1050.4,252.3298 ,c1,c2,-1);
+					else if(EnCarreras[i] == 16)	veh = CreateVehicle(modelo,-1484.4, -276.70001, 1050.4,250.9902 ,c1,c2,-1);
+					else if(EnCarreras[i] == 17)	veh = CreateVehicle(modelo,-1490, -267.70001, 1050.4,243.3624 ,c1,c2,-1);
+					else if(EnCarreras[i] == 18)	veh = CreateVehicle(modelo,-1492.6, -272.29999, 1050.4,245.4938 ,c1,c2,-1);
+					else if(EnCarreras[i] == 19)	veh = CreateVehicle(modelo,-1497.4, -263.5, 1050.4,238.5083 ,c1,c2,-1);
+					else if(EnCarreras[i] == 20)	veh = CreateVehicle(modelo,-1500.2, -267.79999, 1050.4,242.3616 ,c1,c2,-1);
 					if(veh > 0)
 					{
 						
@@ -46797,6 +47016,17 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 					new string[50];
 					format(string,sizeof(string),"%d/%d",EnCarreras[i],ParticipantesCarrera);
 					PlayerTextDrawSetString(i,CarreraT[i][1],string);
+					// --- NUEVO CÓDIGO AQUÍ ---
+					// Actualizamos el HUD para que muestre la cantidad de vueltas dinámica
+					new hud_str[40];
+					format(hud_str, sizeof(hud_str), "Vuelta: 0/%d", VueltasConfiguradas);
+					PlayerTextDrawSetString(i, CarreraT[i][0], hud_str);
+
+					// Aplicar las colisiones (1 desactiva los choques con otros, 0 los activa)
+					if(ColisionesActivadas == 0) DisableRemoteVehicleCollisions(i, 1);
+					else DisableRemoteVehicleCollisions(i, 0);
+					// -------------------------
+
 					TextDrawShowForPlayer(i, BoxCarrera[0]);
 					TextDrawShowForPlayer(i, BoxCarrera[1]);
 					PlayerTextDrawShow(i, CarreraT[i][0]);
@@ -46808,11 +47038,15 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 					GameTextForPlayer(i,"~g~ya",800,6);
 					PlayerPlaySound(i, 1057, 0.0, 0.0, 0.0);
 					Descongelar(i);
+					CP_Actual[i] = 0;
+					UltimoTickCP[i] = GetTickCount(); // Guarda el milisegundo exacto de largada
+					PlayerTextDrawShow(i, TablaCarreraTD[i]);
 					SetPlayerRaceCheckpoint(i,0,-1357.2258,-130.9288,1051.0356,-1365.4042,-280.5632,1045.2321,10);
 					EmpezoCarreraP[i] = 1;
 					Tiempos[i][TiempoCarrera] = GetTickCount();
 				}
 			}
+			ActualizarTablaCarrera();
 		}
 		pickupCarreras = CreatePickup(19132, 14, -1405.1791,-260.0892,1043.6563,-1);
 	}
@@ -46820,16 +47054,22 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 	SacarCarrera(playerid, codigo)
 	{
 		if(EnCarreras[playerid] == 0) return 1;
-		new a = EnCarreras[playerid]+1;
+		new a = EnCarreras[playerid]+1; // Variable original de tu script
+
+		// Liberamos el slot específico
+		CorredorEnSlot[EnCarreras[playerid]] = INVALID_PLAYER_ID;
+
 		EnCarreras[playerid] = 0;
 		ParticipantesCarrera --;
 		EmpezoCarreraP[playerid] = 0;
 		Tiempos[playerid][TiempoCarrera] = 0;
+		VehiculoElegido[playerid] = 0; // <--- AGREGAR ESTA LÍNEA
 		VueltasCarrera[playerid] = 0;
-		Tiempos[playerid][TiempoCarrera] = 0;
 		Tiempos[playerid][TiempoCarrera2] = 0;
 		DisablePlayerRaceCheckpoint(playerid);
+
 		if(codigo == 2) SetPosEx(playerid,-1405.2959,-309.6738,1052.0900,190.0000,7,7,0);
+
 		TextDrawHideForPlayer(playerid, BoxCarrera[0]);
 		TextDrawHideForPlayer(playerid, BoxCarrera[1]);
 		TextDrawHideForPlayer(playerid, BoxCarrera[2]);
@@ -46838,22 +47078,15 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 		PlayerTextDrawHide(playerid, CarreraT[playerid][0]);
 		PlayerTextDrawHide(playerid, CarreraT[playerid][1]);
 		PlayerTextDrawHide(playerid, CarreraT[playerid][2]);
-		if(EmpezoCarrera == 1) return DestroyVehicle(VehiculoCarrera[a-2]),VehiculoCarrera[a-2] = 0;
-		for(new i, j = GetPlayerPoolSize(); i <= j; i++)
-		{
-			
-			if(a >= ParticipantesCarrera) break;
-			if(JugadorLogeado[i])
-			{
-				
-				if(EnCarreras[i] == a)
-				{
-					
-					EnCarreras[i] = a;
-					a ++;
-				}
-			}
-		}
+		CP_Actual[playerid] = 0;
+		UltimoTickCP[playerid] = 0;
+		PlayerTextDrawHide(playerid, TablaCarreraTD[playerid]);
+		ActualizarTablaCarrera();
+
+		if(EmpezoCarrera == 1) return DestroyVehicle(VehiculoCarrera[a-2]), VehiculoCarrera[a-2] = 0;
+
+		// NOTA: Se eliminó el bloque 'for' que desplazaba a los jugadores para evitar que pierdan el puesto que eligieron manualmente.
+		DisableRemoteVehicleCollisions(playerid, 0); // Restaurar colisiones normales
 		return true;
 	}
 
@@ -46868,13 +47101,20 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 		SlotGanador = 0;
 		for(new a; a < 4; a++)
 		{
-			
-			for(new b; b < 12; b++)
+			for(new b; b < 84; b++)
 			{
-				
 				InfoCP[a][b] = 0;
 			}
 		}
+
+		// Vaciamos la grilla al reiniciar
+		for(new i = 1; i <= 20; i++)
+		{
+		    CorredorEnSlot[i] = INVALID_PLAYER_ID;
+		}
+		
+		for(new i = 0; i < MAX_PLAYERS; i++) CP_Actual[i] = 0;
+		for(new i = 0; i < MAX_PLAYERS; i++) UltimoTickCP[i] = 0;
 	}
 
 	public TimerFC()
@@ -49984,18 +50224,32 @@ CMD:inscribirse(playerid,params[])
 		if(EmpezoCarrera == 1) return SendClientMessage(playerid,-1,"No puedes inscribirte si la carrera ya comenzo.");
 		if(ParticipantesCarrera >= 20) return SendClientMessage(playerid,-1,"No hay mas lugares libres para la carrera, espera a la siguiente.");
 		if(PlayerInfo[playerid][Level] < 4) return SendClientMessage(playerid,-1,"Necesitas nivel 4 para inscribirte.");
-		QuitarDinero(playerid,2000);
-		lugarcarrera ++;
-		EnCarreras[playerid] = lugarcarrera;
-		ParticipantesCarrera ++;
-		ParticipantesCarrera2 ++;
-		SendClientMessage(playerid,-1,"Te inscribiste para participar en la carrera, por favor espera unos minutos.");
-		SendClientMessage(playerid,-1,"Perderás el puesto si sales del estadio.");
-    }
+
+		// Construir el menú tabular
+		new dialog_str[1024], linea[64];
+		strcat(dialog_str, "Puesto\tParticipante\n"); // Cabeceras
+
+		for(new i = 1; i <= 20; i++) // Recorremos los 20 slots
+		{
+			// Verificamos si el slot está ocupado y el jugador conectado
+			if(CorredorEnSlot[i] != INVALID_PLAYER_ID && IsPlayerConnected(CorredorEnSlot[i]))
+			{
+				format(linea, sizeof(linea), "#%d\t{DBED15}%s\n", i, PlayerInfo[CorredorEnSlot[i]][Nickname]);
+			}
+			else
+			{
+				format(linea, sizeof(linea), "#%d\t{FF0000}Vacío\n", i);
+			}
+			strcat(dialog_str, linea);
+		}
+
+		ShowPlayerDialog(playerid, DIALOG_INSCRIPCION, DIALOG_STYLE_TABLIST_HEADERS, "Inscripción Carrera", dialog_str, "Seleccionar", "Salir");
+		return 1;
+	}
 	if(IsPlayerInRangeOfPoint(playerid,5, 415.2025,2535.5874,19.1484))
 	{
-	    if(ViajeAvion[playerid] == 1) return SendClientMessage(playerid,-1,"Ya estás inscrito en el curso de paracaidismo.");
-	    if(PlayerInfo[playerid][jDinero] < 5000) return SendClientMessage(playerid,-1,"Necesitas {00CC00}$5.000{FFFFFF} para poder inscribirte en el curso de paracaidismo.");
+		if(ViajeAvion[playerid] == 1) return SendClientMessage(playerid,-1,"Ya estás inscrito en el curso de paracaidismo.");
+		if(PlayerInfo[playerid][jDinero] < 5000) return SendClientMessage(playerid,-1,"Necesitas {00CC00}$5.000{FFFFFF} para poder inscribirte en el curso de paracaidismo.");
 		SendClientMessage(playerid,-1,"Te inscribiste para participar en el curso de paracaidismo, por favor espera unos minutos.");
 		SendClientMessage(playerid,-1,"Si te alejas mucho de la oficina, no podrás subirte al avión.");
 		QuitarDinero(playerid, 5000);
@@ -50003,6 +50257,120 @@ CMD:inscribirse(playerid,params[])
 		return 1;
 	}
 	return 1;
+}
+
+CMD:participantes(playerid,params[])
+{
+	if(IsPlayerInRangeOfPoint(playerid,5,-1447.7421,-313.3544,1052.0969)) // Misma coordenada de la boletería
+	{
+		new dialog_str[1132], linea[128], nombre_auto[24]; // Aumentamos 'linea' a 128 para mayor seguridad con el texto extra
+		strcat(dialog_str, "Puesto\tParticipante\tVehículo\n"); // Agregamos la nueva columna "Vehículo"
+
+		for(new i = 1; i <= 20; i++)
+		{
+			if(CorredorEnSlot[i] != INVALID_PLAYER_ID && IsPlayerConnected(CorredorEnSlot[i]))
+			{
+				new id_corredor = CorredorEnSlot[i];
+
+				// Verificamos el modelo elegido por el jugador
+				switch(VehiculoElegido[id_corredor])
+				{
+				    case 503: nombre_auto = "Hotring B";
+				    case 494: nombre_auto = "Hotring";
+				    default: nombre_auto = "Hotring A"; // Funciona como salvavidas. Si es 502 o 0, mostrará Hotring A.
+				}
+
+				// Agregamos la tabulación extra con la variable nombre_auto
+				format(linea, sizeof(linea), "#%d\t{DBED15}%s\t{FFFFFF}%s\n", i, PlayerInfo[id_corredor][Nickname], nombre_auto);
+			}
+			else
+			{
+				// Si está vacío, le ponemos un simple guión
+				format(linea, sizeof(linea), "#%d\t{FF0000}Vacío\t{777777}-\n", i);
+			}
+			strcat(dialog_str, linea);
+		}
+		ShowPlayerDialog(playerid, DIALOG_PARTICIPANTES, DIALOG_STYLE_TABLIST_HEADERS, "Participantes Carrera", dialog_str, "Cerrar", "");
+	}
+	return 1;
+}
+CMD:hotring(playerid, params[])
+{
+	if(EnCarreras[playerid] == 0) return SendClientMessage(playerid, -1, "Debes estar inscrito en la carrera para poder elegir un vehículo.");
+	if(EmpezoCarrera == 1) return SendClientMessage(playerid, -1, "La carrera ya ha comenzado, no puedes cambiar de vehículo ahora.");
+
+	// Mostramos el menú con las 3 opciones
+	ShowPlayerDialog(playerid, DIALOG_VEHICULO, DIALOG_STYLE_LIST, "Seleccionar Vehículo", "Hotring A\nHotring B\nHotring", "Seleccionar", "Cancelar");
+	return 1;
+}
+CMD:opcionescarrera(playerid, params[])
+{
+	// Verifica si es moderador/admin (basado en tu macro MODDER_GAME)
+	if(PlayerInfo[playerid][Modder] < MODDER_GAME) return SendClientMessage(playerid, -1, "No tienes permisos para usar este comando.");
+
+	new str[256];
+	format(str, sizeof(str), "Vueltas\t(Actual: %d)\nColisiones\t(Actual: %s)", VueltasConfiguradas, ColisionesActivadas ? "{00CC00}Activadas" : "{FF0000}Desactivadas");
+	ShowPlayerDialog(playerid, DIALOG_OPCIONES_CARRERA, DIALOG_STYLE_LIST, "Opciones del Evento", str, "Modificar", "Cerrar");
+	return 1;
+}
+CMD:recibir(playerid, params[])
+{
+    // Verificamos si el usuario no escribió ningún parámetro adicional
+    if(isnull(params)) return SendClientMessage(playerid, -1, "Usa: {DBED15}/recibir stats{FFFFFF}");
+
+    // Comprobamos si el parámetro ingresado es exactamente "stats"
+    if(strcmp(params, "stats", true) == 0)
+    {
+        // Usamos la variable pStats del jInfo para bloquear múltiples usos
+        if(PlayerInfo[playerid][pStats] == 1) return SendClientMessage(playerid, -1, "{FF0000}Error:{FFFFFF} Ya has recibido tus stats iniciales.");
+
+        // Entregar Nivel 4
+        PlayerInfo[playerid][Level] = 4;
+        SetPlayerScore(playerid, 4);
+
+        // Entregar $400.000 utilizando tu función nativa
+        GiveCash(playerid, 400000);
+
+        // Marcar la cuenta para que no pueda volver a usarlo
+        PlayerInfo[playerid][pStats] = 1;
+
+        SendClientMessage(playerid, -1, "{00CC00}¡Felicidades!{FFFFFF} Has recibido Nivel 4 y $400.000 para comenzar a jugar.");
+
+        // Forzamos el guardado en la base de datos instantáneamente para evitar exploits si el jugador reloguea rápido
+        new Query[256];
+        mysql_format(handle_db, Query, sizeof(Query), "UPDATE `usuarios` SET `Level`='4', `pStats`='1' WHERE `Username`='%e'", PlayerInfo[playerid][Nickname]);
+        mysql_tquery(handle_db, Query);
+    }
+    else
+    {
+        SendClientMessage(playerid, -1, "Comando desconocido. Usa: {DBED15}/recibir stats{FFFFFF}");
+    }
+    return 1;
+}
+CMD:vc(playerid, params[])
+{
+    if(PlayerInfo[playerid][Level] < 10) return SendClientMessage(playerid, -1, "{FF0000}Error:{FFFFFF} Necesitas ser nivel 10 para usar este comando.");
+
+    new color1, color2;
+    if(sscanf(params, "dd", color1, color2)) return SendClientMessage(playerid, -1, "Usa: {DBED15}/vc [Color 1] [Color 2]");
+
+    if((color1 < -1 || color1 > 255) || (color2 < -1 || color2 > 255)) return SendClientMessage(playerid, -1, "{FF0000}Error:{FFFFFF} Las IDs de colores deben estar entre 0 y 255.");
+
+    // Usamos los nuevos nombres de variables
+    PlayerInfo[playerid][pVehColor1] = color1;
+    PlayerInfo[playerid][pVehColor2] = color2;
+
+    if(IsPlayerInAnyVehicle(playerid))
+    {
+        ChangeVehicleColor(GetPlayerVehicleID(playerid), color1, color2);
+    }
+
+    new Query[256];
+    mysql_format(handle_db, Query, sizeof(Query), "UPDATE `usuarios` SET `vColor1`='%d', `vColor2`='%d' WHERE `Username`='%e'", color1, color2, PlayerInfo[playerid][Nickname]);
+    mysql_tquery(handle_db, Query);
+
+    SendClientMessage(playerid, -1, "{00CC00}¡Éxito!{FFFFFF} Los colores de tus vehículos han sido actualizados.");
+    return 1;
 }
 CMD:control(playerid,params[])
 {
@@ -60016,4 +60384,62 @@ public OnPlayerModelSelection(playerid, response, listid, modelid)
 		CopObjectData[id][ObjLabel] = CreateDynamic3DTextLabel(string, 0x3498DBFF, x, y, z + 2.0, 10.0, _, _, _, CopObjectData[id][ObjVirtualWorld], CopObjectData[id][ObjInterior]);
 	}
 	return 1;
+}
+
+stock ActualizarTablaCarrera()
+{
+    new playerScores[MAX_PLAYERS][rankingEnum], index = 0;
+    new tick_actual = GetTickCount();
+
+    // 1. Recopilamos a todos los corredores y calculamos su posición exacta
+    for(new i = 0; i <= GetPlayerPoolSize(); i++)
+    {
+        if(EnCarreras[i] > 0 && EmpezoCarreraP[i] == 1 && IsPlayerConnected(i))
+        {
+            // Calculamos los milisegundos que tardó en llegar a ESE checkpoint
+            new ms_tardados = UltimoTickCP[i] - Tiempos[i][TiempoCarrera];
+
+            // Límite de seguridad de ~16 minutos para evitar números negativos
+            if(ms_tardados > 999000) ms_tardados = 999000;
+
+            // Fórmula: Vueltas (10M) + Checkpoint (1M) + Tiempo (Al restar, el que tardó MENOS obtiene MÁS puntos)
+            new score = (VueltasCarrera[i] * 10000000) + (CP_Actual[i] * 1000000) + (1000000 - ms_tardados);
+
+            playerScores[index][player_Score] = score;
+            playerScores[index][player_ID] = i;
+            index++;
+        }
+    }
+
+    if(index == 0) return 1;
+
+    // 2. Usamos la función nativa de tu GM para ordenarlos de mayor a menor puntaje
+    OrdenUsuarios(playerScores, 0, index - 1);
+
+    // 3. Armamos la tabla de texto
+    new string_tabla[1024];
+    strcat(string_tabla, "~r~POSICIONES EN VIVO~n~");
+
+    for(new i = 0; i < index; i++)
+    {
+        new u = playerScores[i][player_ID];
+        new linea[128];
+
+        new vuelta_mostrar = VueltasCarrera[u];
+        if(vuelta_mostrar > VueltasConfiguradas) vuelta_mostrar = VueltasConfiguradas;
+
+        // Formato: 1. Nombre - V: 1/10
+        format(linea, sizeof(linea), "~w~%d. ~y~%s ~w~- V: %d/%d~n~", i + 1, PlayerInfo[u][Nickname], vuelta_mostrar, VueltasConfiguradas);
+        strcat(string_tabla, linea);
+    }
+
+    // 4. Se la enviamos a todos los corredores actualizadamente
+    for(new i = 0; i <= GetPlayerPoolSize(); i++)
+    {
+        if(EnCarreras[i] > 0 && EmpezoCarreraP[i] == 1 && IsPlayerConnected(i))
+        {
+            PlayerTextDrawSetString(i, TablaCarreraTD[i], string_tabla);
+        }
+    }
+    return 1;
 }
